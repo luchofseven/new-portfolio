@@ -367,10 +367,10 @@ img {
 
 @media (max-width: 768px) {
   a {
-    font-size: .8rem;
+    font-size: .9rem;
   }
   p {
-    font-size: .8rem;
+    font-size: .9rem;
   }
   .main-app {
     width: 100%;
@@ -489,13 +489,13 @@ img {
   }
   .hero-container .hero-container-top .hero-container-top-left h1 {
     font-family: var(--font-dmSerifDisplay), sans-serif;
-    font-size: 2rem;
+    font-size: 2.1rem;
     letter-spacing: 1px;
     text-align: center;
   }
   .hero-container .hero-container-top .hero-container-top-left h1 span {
     color: #ec5cff;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     display: block;
   }
   .hero-container .hero-container-top .hero-container-top-left p {
@@ -519,7 +519,7 @@ img {
     font-family: var(--font-arimo);
     font-weight: normal;
     letter-spacing: 0px;
-    font-size: .8rem;
+    font-size: .9rem;
     cursor: pointer;
     transition: none;
   }
@@ -560,7 +560,7 @@ img {
     align-items: center;
   }
   .section-container .section-title h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .projects-projects {
     width: 100%;
@@ -600,9 +600,10 @@ img {
     align-items: flex-start;
     justify-content: space-evenly;
     padding: 0 1rem;
+    gap: 1rem;
   }
   .projects-card .projects-card-info h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #ec5cff;
   }
   .projects-card .projects-card-info p {
@@ -613,7 +614,6 @@ img {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: .8rem;
   }
   .projects-card .projects-card-info footer a {
     text-decoration: none;
