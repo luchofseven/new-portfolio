@@ -13,7 +13,7 @@ export default function Navbar (): JSX.Element {
 
   const handleClickMenu = (e: MouseEvent): void => {
     const target = e.target as HTMLElement
-    if (target?.matches('.navbar-nav') || target?.matches('.navbar-nav *')) {
+    if (target?.matches('.navbar-nav') || target?.matches('.navbar-nav *') || target?.matches('.navbar-aside *')) {
       setMenu(false)
     }
   }

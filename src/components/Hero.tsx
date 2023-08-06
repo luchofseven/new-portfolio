@@ -13,7 +13,7 @@ export default function Hero (): JSX.Element {
               eficiente. 🚀
             </span>
           </p>
-          <button>Descargar CV</button>
+          <a href="/lf-cv.pdf" download>Descargar CV</a>
         </article>
         <article className="hero-container-top-right">
           <img src="/me.webp" alt="Foto de Luciano Fernández" />
