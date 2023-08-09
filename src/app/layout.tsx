@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Luciano Fernández - Portafolio Web',
   description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end',
   applicationName: 'Luciano Fernández',
+  icons: '/lf-logo.png',
   themeColor: '#ec5cff',
   appleWebApp: { title: 'Luciano Fernández' },
   twitter: { title: 'Luciano Fernández - Portafolio Web', card: 'summary_large_image', site: 'Luciano Fernández', creator: '@luchofseven', images: '/lf-logo.png', description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end' },
