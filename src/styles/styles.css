@@ -56,7 +56,7 @@ img {
 }
 
 .navbar-header .navbar-aside img {
-  width: 80px;
+  width: 70px;
   height: auto;
   transition: transform 200ms ease-in-out;
 }
@@ -90,9 +90,8 @@ img {
 
 .navbar-header .navbar-nav ul a {
   text-decoration: none;
-  font-weight: normal;
   color: #ffffff;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease;
 }
 
 .navbar-header .navbar-nav ul a:hover {
@@ -108,7 +107,6 @@ img {
 
 .navbar-header .navbar-nav .navbar-nav-social a {
   color: #ffffff;
-  fill: #ffffff;
   transition: all 200ms ease-in-out;
 }
 
@@ -124,10 +122,10 @@ img {
 }
 
 .hero-container .hero-container-top {
-  height: 500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 500px;
 }
 
 .hero-container .hero-container-top .hero-container-top-left {
@@ -136,8 +134,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  gap: 3rem;
+  padding: 2rem 0rem;
+  gap: 1rem;
 }
 
 .hero-container .hero-container-top .hero-container-top-left h1 {
@@ -153,9 +151,10 @@ img {
 }
 
 .hero-container .hero-container-top .hero-container-top-left p {
-  line-height: 22px;
+  line-height: 24px;
   margin: 0;
   width: 60%;
+  flex-grow: 1;
 }
 
 .hero-container .hero-container-top .hero-container-top-left p span {
@@ -258,17 +257,19 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 2rem 0;
   padding-left: 1rem;
-  justify-content: space-evenly;
 }
 
 .projects-card .projects-card-info h3 {
   color: #ec5cff;
+  letter-spacing: .5px;
 }
 
 .projects-card .projects-card-info p {
   width: 80%;
-  line-height: 22px;
+  line-height: 24px;
+  flex-grow: 1;
 }
 
 .projects-card .projects-card-info footer {
@@ -297,8 +298,8 @@ img {
 
 .about-me-container p {
   margin: 0;
-  padding: 1rem 1rem;
-  line-height: 22px;
+  padding: .7rem 1rem;
+  line-height: 24px;
 }
 
 .about-me-container p span > a {
@@ -421,7 +422,7 @@ img {
     gap: 3rem;
     transition: transform 200ms ease-in-out;
     transform: translateX(100%);
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   .navbar-header .navbar-nav.is-active {
     transform: translateX(0);
@@ -497,7 +498,7 @@ img {
     display: block;
   }
   .hero-container .hero-container-top .hero-container-top-left p {
-    line-height: 20px;
+    line-height: 22px;
     margin: 0;
     padding: 0 1rem;
     width: 100%;
@@ -597,9 +598,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-evenly;
     padding: 0 1rem;
-    gap: 1rem;
   }
   .projects-card .projects-card-info h3 {
     font-size: 1.1rem;
@@ -607,7 +606,7 @@ img {
   }
   .projects-card .projects-card-info p {
     width: 100%;
-    line-height: 20px;
+    line-height: 22px;
   }
   .projects-card .projects-card-info footer {
     width: 100%;
@@ -631,7 +630,7 @@ img {
   .about-me-container p {
     margin: 0.5rem auto;
     padding: 0.8rem 1rem;
-    line-height: 20px;
+    line-height: 22px;
   }
   .about-me-container p span > a {
     color: #ec5cff;
@@ -801,6 +800,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 300px;
   }
   .hero-container .hero-container-top .hero-container-top-left {
     width: 70%;
@@ -808,8 +808,9 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: 1rem 0;
   }
   .hero-container .hero-container-top .hero-container-top-left h1 {
     font-family: var(--font-dmSerifDisplay), sans-serif;
@@ -824,7 +825,7 @@ img {
   .hero-container .hero-container-top .hero-container-top-left p {
     line-height: 22px;
     margin: 0;
-    width: 60%;
+    width: 50%;
   }
   .hero-container .hero-container-top .hero-container-top-left p span {
     display: block;
@@ -834,9 +835,9 @@ img {
     color: #ffffff;
     text-align: center;
     min-width: 25%;
-    border: 2px solid #ec5cff;
+    border: 1px solid #ec5cff;
     border-radius: 5rem;
-    padding: 0.8rem 0;
+    padding: 0.7rem 0;
     font-family: var(--font-arimo);
     cursor: pointer;
     text-decoration: none;
@@ -855,6 +856,7 @@ img {
   }
   .hero-container .hero-container-top .hero-container-top-right img {
     min-width: 240px;
+    max-width: 240px;
     filter: grayscale(1);
     transition: none;
   }
@@ -917,9 +919,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-evenly;
     padding: 0 1rem;
-    gap: 1rem;
   }
   .projects-card .projects-card-info h3 {
     font-size: 1.1rem;
@@ -927,7 +927,7 @@ img {
   }
   .projects-card .projects-card-info p {
     width: 100%;
-    line-height: 20px;
+    line-height: 22px;
   }
   .projects-card .projects-card-info footer {
     width: 100%;
@@ -951,7 +951,7 @@ img {
   .about-me-container p {
     margin: 0.5rem auto;
     padding: 0.8rem 1rem;
-    line-height: 20px;
+    line-height: 22px;
   }
   .about-me-container p span > a {
     color: #ec5cff;
