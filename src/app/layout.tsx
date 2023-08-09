@@ -6,9 +6,10 @@ export const metadata: Metadata = {
   title: 'Luciano Fernández - Portafolio Web',
   description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end',
   applicationName: 'Luciano Fernández',
+  themeColor: '#ec5cff',
   appleWebApp: { title: 'Luciano Fernández' },
-  twitter: { title: 'Luciano Fernández - Portafolio Web', card: 'summary_large_image', site: 'Luciano Fernández', creator: '@luchofseven', images: 'https://portfolio-zeta-five-47.vercel.app/lf-logo.png', description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end' },
-  openGraph: { title: 'Luciano Fernández - Portafolio Web', type: 'website', images: [{ url: 'https://portfolio-zeta-five-47.vercel.app/lf-logo.png' }], url: 'https://portfolio-zeta-five-47.vercel.app/', description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end', locale: 'es_ES', siteName: 'Luciano Fernández' }
+  twitter: { title: 'Luciano Fernández - Portafolio Web', card: 'summary_large_image', site: 'Luciano Fernández', creator: '@luchofseven', images: '/lf-logo.png', description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end' },
+  openGraph: { title: 'Luciano Fernández - Portafolio Web', type: 'website', images: [{ url: '/lf-logo.png' }], url: 'https://luchofseven.com.ar', description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end', locale: 'es_ES', siteName: 'Luciano Fernández' }
 }
 
 export default function RootLayout ({
