@@ -9,18 +9,14 @@ export default function AboutMe (): JSX.Element {
         <p>
           🧑‍💻 Inicié mis pasos en el mundo de la programación hace
           aproximadamente más de 2 años. En todo este tiempo adquirí
-          conocimientos en distintas tecnologías como: HTML, CSS, Sass,
+          experiencia en distintas tecnologías como: HTML, CSS, Sass,
           JavaScript, React, Next.Js, Tailwind, entre otros.
         </p>
         <p>
-          🚀 Actualmente estoy aprendiendo y realizando aplicaciones con TypeScript,
-          espero profundizarlo de tal manera que pueda lograr un óptimo nivel
-          y dominar éste lenguaje.
+          🚀 Actualmente estoy realizando aplicaciones con TypeScript, profundizando de tal manera para lograr dominar éste lenguaje.
         </p>
         <p>
-          🎯 Me encantaría formar parte de manera profesional en el sector de
-          desarrollo de una empresa y/o contribuyendo a un proyecto contigo, utilizando en lo posible, React como
-          tecnología principal.
+          🎯 Me encantaría formar parte del sector de desarrollo de una empresa y/o contribuyendo a un proyecto contigo, utilizando en lo posible React como tecnología principal.
         </p>
         <p>
           ✉️ Cualquiera sean tus dudas podés contactarme a través de mis medios de
