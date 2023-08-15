@@ -7,13 +7,14 @@ export default function Hero (): JSX.Element {
             Luciano Fernández<span>Desarrollador Frontend</span>
           </h1>
           <p>
-            ¡Me gusta destacar en los detalles! 😁
+            ¡Me gusta destacar en los detalles!
             <span>
-              Por eso, doy lo mejor de mí para que tu web sea la más bonita, óptima y
-              eficiente. 🚀
+              Por eso, doy lo mejor de mí para que tu web sea la más bonita. 💖
             </span>
           </p>
-          <a href="/lf-cv.pdf" download>Descargar CV</a>
+          <a href="/lf-cv.pdf" download>
+            Descargar CV
+          </a>
         </article>
         <article className="hero-container-top-right">
           <img src="/me.webp" alt="Foto de Luciano Fernández" />

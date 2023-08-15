@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Footer (): JSX.Element {
   return (
-    <footer id='contact' className="footer-container">
+    <footer id="contact" className="footer-container">
       <div className="footer-info">
         <div>
           <a href="mailto:luchofseven@gmail.com">

@@ -13,7 +13,11 @@ export default function Navbar (): JSX.Element {
 
   const handleClickMenu = (e: MouseEvent): void => {
     const target = e.target as HTMLElement
-    if (target?.matches('.navbar-nav') || target?.matches('.navbar-nav *') || target?.matches('.navbar-aside *')) {
+    if (
+      target?.matches('.navbar-nav') ||
+      target?.matches('.navbar-nav *') ||
+      target?.matches('.navbar-aside *')
+    ) {
       setMenu(false)
     }
   }
@@ -21,7 +25,9 @@ export default function Navbar (): JSX.Element {
   useEffect(() => {
     document.addEventListener('click', handleClickMenu)
 
-    return () => { document.removeEventListener('click', handleClickMenu) }
+    return () => {
+      document.removeEventListener('click', handleClickMenu)
+    }
   }, [])
 
   return (
