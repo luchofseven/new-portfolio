@@ -1,4 +1,4 @@
-import { EMAIL, GITHUB, LINKEDIN } from '@/icons/Icons'
+import { EmailIcon, GithubIcon, LinkedinIcon } from '@/icons/Icons'
 import Image from 'next/image'
 
 export default function Footer (): JSX.Element {
@@ -7,21 +7,21 @@ export default function Footer (): JSX.Element {
       <div className="footer-info">
         <div>
           <a href="mailto:luchofseven@gmail.com">
-            {EMAIL} luchofseven@gmail.com
+            <EmailIcon />luchofseven@gmail.com
           </a>
           <a
             href="https://github.com/luchofseven"
             rel="noreferrer"
             target="_blank"
           >
-            {GITHUB} luchofseven
+            <GithubIcon />luchofseven
           </a>
           <a
             href="https://www.linkedin.com/in/luchofseven/"
             rel="noreferrer"
             target="_blank"
           >
-            {LINKEDIN} /in/luchofseven
+            <LinkedinIcon />/in/luchofseven
           </a>
         </div>
       </div>

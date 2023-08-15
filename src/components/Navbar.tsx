@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { GITHUB, LINKEDIN, MENU_OPEN, MENU_CLOSE } from '../icons/Icons'
+import { GithubIcon, LinkedinIcon, MenuOpenIcon, MenuCloseIcon } from '../icons/Icons'
 
 export default function Navbar (): JSX.Element {
   const [menu, setMenu] = useState(false)
@@ -42,7 +42,7 @@ export default function Navbar (): JSX.Element {
           />
         </a>
       </aside>
-      <button onClick={handleClick}>{menu ? MENU_OPEN : MENU_CLOSE}</button>
+      <button onClick={handleClick}>{menu ? <MenuOpenIcon /> : <MenuCloseIcon /> }</button>
       <nav className={`navbar-nav ${menu ? 'is-active' : ''}`}>
         <ul>
           <a href="#projects">PROYECTOS</a>
@@ -55,14 +55,14 @@ export default function Navbar (): JSX.Element {
             rel="noreferrer"
             target="_blank"
           >
-            {GITHUB}
+            <GithubIcon />
           </a>
           <a
             href="https://www.linkedin.com/in/luchofseven/"
             rel="noreferrer"
             target="_blank"
           >
-            {LINKEDIN}
+            <LinkedinIcon />
           </a>
         </article>
       </nav>
