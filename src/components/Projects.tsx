@@ -8,36 +8,43 @@ export default function Projects (): JSX.Element {
       </header>
       <main className="projects-projects">
         <Card
+          img="/project-books-app.webp"
+          title="Libros &quot;Sorbil&quot;"
+          description="Aplicación en la cual se lista una cierta cantidad de libros, dónde el usuario puede filtrar estos por su género y agregarlos a una lista de lectura. Construído con React, TypeScript y Sass."
+          urlDeploy="https://books-app-pied.vercel.app/"
+          urlRepo="https://github.com/luchofseven/books-app"
+        />
+        <Card
           img="/project-municipalidad-vera.webp"
           title="Muncipalidad de Vera"
-          description="Sitio web de la Municipalidad de Vera. En el cual se realizó un rediseño de la página actual. Construído con React y TypeScript."
+          description="Sitio web en el cual se realizó un rediseño de la página oficial de dicha municipalidad. Construído con React y TypeScript."
           urlDeploy="https://municipalidad-vera.vercel.app/"
           urlRepo="https://github.com/luchofseven/municipalidad-vera"
         />
         <Card
           img="/project-tesla-landing.webp"
-          title="Tesla Landing Clone"
+          title="Tesla Clon"
           description="Clonación del sitio web de Tesla. En base a un stream de @midudev. Construído con Astro y Tailwind."
           urlDeploy="https://tesla-clone-henna-nine.vercel.app/"
           urlRepo="https://github.com/luchofseven/tesla-clone"
         />
         <Card
           img="/project-todo-app.webp"
-          title="TO-DO App"
-          description='"Lista de tareas", en el cual se pueden agregar, editar o eliminar las mismas. Construído con Next.Js y Tailwind.'
+          title="Lista de Tareas"
+          description='Aplicación tipo agenda o anotador, en la cual se pueden agregar, editar o eliminar dichas tareas. Construído con Next.Js y Tailwind.'
           urlDeploy="https://todo-app-next-woad.vercel.app/"
           urlRepo="https://github.com/luchofseven/crud-nextjs-tailwind"
         />
         <Card
           img="/project-search-movies-app.webp"
-          title="Movies Search App"
+          title="Buscador de películas y series"
           description="Sitio web para buscar y listar películas y series. El mismo está realizado con React, haciendo uso de hooks y también la implementación de un debounce, para que al escribir la búsqueda, la petición se haga de forma automática luego de haber transcurrido algunos segundos."
           urlDeploy="https://movies-search-app-phi.vercel.app/"
           urlRepo="https://github.com/luchofseven/movies-search-app"
         />
         <Card
           img="/project-bonsai.webp"
-          title="Bonsai Clone"
+          title="Bonsai Clon"
           description='Clonación del sitio web de Bonsai, en el cual se puede elegir y simular el cambio de planes y precios. Proyecto obtenido de "Front-end Practice". El sitio está construído con React y Sass.'
           urlDeploy="https://bonsai-proyecto-react.vercel.app/"
           urlRepo="https://github.com/luchofseven/bonsai-proyecto-react"
