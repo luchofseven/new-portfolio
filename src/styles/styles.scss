@@ -156,12 +156,12 @@ img {
 
       h1 {
         font-family: var(--font-dmSerifDisplay), sans-serif;
-        font-size: 3.5rem;
+        font-size: 4rem;
         letter-spacing: 1px;
 
         span {
           color: $second-color;
-          font-size: 2.5rem;
+          font-size: 3rem;
           display: block;
         }
       }
@@ -170,14 +170,17 @@ img {
         line-height: 24px;
         margin: 0;
         width: 60%;
-        flex-grow: 1;
+        flex-grow: 0;
 
         span {
+          letter-spacing: 0px;
+          font-size: 1rem;
           display: block;
         }
       }
 
       a {
+        margin-top: 2rem;
         background-color: $background-color;
         color: $white-color;
         text-align: center;
@@ -215,12 +218,6 @@ img {
         }
       }
     }
-  }
-
-  .hero-container-bottom {
-    background: linear-gradient(to right, $second-color, $third-color);
-    height: 5rem;
-    width: 100%;
   }
 }
 
@@ -320,9 +317,14 @@ img {
   padding: 1rem 0;
 
   p {
-    margin: 0;
+    margin: 0 auto;
     padding: .7rem 1rem;
     line-height: 24px;
+    width: 60%;
+
+    &:first-child, &:last-child {
+      text-align: center;
+    }
 
     span > a {
       color: $second-color;
@@ -394,7 +396,7 @@ img {
   // GENERAL
   a,
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   // MAIN APP
@@ -532,13 +534,13 @@ img {
 
         h1 {
           font-family: var(--font-dmSerifDisplay), sans-serif;
-          font-size: 2.1rem;
+          font-size: 2.3rem;
           letter-spacing: 1px;
           text-align: center;
 
           span {
             color: $second-color;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             display: block;
           }
         }
@@ -597,12 +599,6 @@ img {
         }
       }
     }
-
-    .hero-container-bottom {
-      background: linear-gradient(to right, $second-color, $third-color);
-      height: 3rem;
-      width: 100%;
-    }
   }
 
   // SECTIONS
@@ -629,7 +625,7 @@ img {
   .projects-projects {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
   }
 
@@ -675,7 +671,7 @@ img {
 
       p {
         width: 100%;
-        line-height: 22px;
+        line-height: 24px;
       }
 
       footer {
@@ -706,7 +702,12 @@ img {
     p {
       margin: 0.5rem auto;
       padding: 0.8rem 1rem;
-      line-height: 22px;
+      line-height: 24px;
+      width: 100%;
+
+      &:first-child, &:last-child {
+        text-align: start;
+      }
 
       span > a {
         color: $second-color;
@@ -784,7 +785,7 @@ img {
   // GENERAL
   a,
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   // MAIN APP
@@ -921,12 +922,12 @@ img {
 
       h1 {
         font-family: var(--font-dmSerifDisplay), sans-serif;
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         letter-spacing: 1px;
 
         span {
           color: $second-color;
-          font-size: 1.8rem;
+          font-size: 2rem;
           display: block;
         }
       }
@@ -982,11 +983,11 @@ img {
     }
   }
 
-  .hero-container-bottom {
-    background: linear-gradient(to right, $second-color, $third-color);
-    height: 3rem;
-    width: 100%;
-  }
+  // .hero-container-bottom {
+  //   background: linear-gradient(to right, $second-color, $third-color);
+  //   height: 3rem;
+  //   width: 100%;
+  // }
 }
 
   // SECTIONS

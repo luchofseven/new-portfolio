@@ -140,13 +140,13 @@ img {
 
 .hero-container .hero-container-top .hero-container-top-left h1 {
   font-family: var(--font-dmSerifDisplay), sans-serif;
-  font-size: 3.5rem;
+  font-size: 4rem;
   letter-spacing: 1px;
 }
 
 .hero-container .hero-container-top .hero-container-top-left h1 span {
   color: #ec5cff;
-  font-size: 2.5rem;
+  font-size: 3rem;
   display: block;
 }
 
@@ -154,14 +154,17 @@ img {
   line-height: 24px;
   margin: 0;
   width: 60%;
-  flex-grow: 1;
+  flex-grow: 0;
 }
 
 .hero-container .hero-container-top .hero-container-top-left p span {
+  letter-spacing: 0px;
+  font-size: 1rem;
   display: block;
 }
 
 .hero-container .hero-container-top .hero-container-top-left a {
+  margin-top: 2rem;
   background-color: #0e0012;
   color: #ffffff;
   text-align: center;
@@ -197,12 +200,6 @@ img {
 .hero-container .hero-container-top .hero-container-top-right img:hover {
   filter: grayscale(0);
   transform: scale(1.05);
-}
-
-.hero-container .hero-container-bottom {
-  background: linear-gradient(to right, #ec5cff, #82e8cc);
-  height: 5rem;
-  width: 100%;
 }
 
 .section-container {
@@ -297,9 +294,14 @@ img {
 }
 
 .about-me-container p {
-  margin: 0;
+  margin: 0 auto;
   padding: .7rem 1rem;
   line-height: 24px;
+  width: 60%;
+}
+
+.about-me-container p:first-child, .about-me-container p:last-child {
+  text-align: center;
 }
 
 .about-me-container p span > a {
@@ -368,7 +370,7 @@ img {
 @media (max-width: 768px) {
   a,
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .main-app {
     width: 100%;
@@ -488,13 +490,13 @@ img {
   }
   .hero-container .hero-container-top .hero-container-top-left h1 {
     font-family: var(--font-dmSerifDisplay), sans-serif;
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     letter-spacing: 1px;
     text-align: center;
   }
   .hero-container .hero-container-top .hero-container-top-left h1 span {
     color: #ec5cff;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     display: block;
   }
   .hero-container .hero-container-top .hero-container-top-left p {
@@ -543,11 +545,6 @@ img {
     filter: grayscale(1);
     transform: none;
   }
-  .hero-container .hero-container-bottom {
-    background: linear-gradient(to right, #ec5cff, #82e8cc);
-    height: 3rem;
-    width: 100%;
-  }
   .section-container {
     margin: 2rem auto;
     width: 100%;
@@ -565,7 +562,7 @@ img {
   .projects-projects {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
   }
   .projects-card {
@@ -606,7 +603,7 @@ img {
   }
   .projects-card .projects-card-info p {
     width: 100%;
-    line-height: 22px;
+    line-height: 24px;
   }
   .projects-card .projects-card-info footer {
     width: 100%;
@@ -630,7 +627,11 @@ img {
   .about-me-container p {
     margin: 0.5rem auto;
     padding: 0.8rem 1rem;
-    line-height: 22px;
+    line-height: 24px;
+    width: 100%;
+  }
+  .about-me-container p:first-child, .about-me-container p:last-child {
+    text-align: start;
   }
   .about-me-container p span > a {
     color: #ec5cff;
@@ -695,7 +696,7 @@ img {
 @media (min-width: 769px) and (max-width: 1023px) {
   a,
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .main-app {
     width: 100%;
@@ -814,12 +815,12 @@ img {
   }
   .hero-container .hero-container-top .hero-container-top-left h1 {
     font-family: var(--font-dmSerifDisplay), sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     letter-spacing: 1px;
   }
   .hero-container .hero-container-top .hero-container-top-left h1 span {
     color: #ec5cff;
-    font-size: 1.8rem;
+    font-size: 2rem;
     display: block;
   }
   .hero-container .hero-container-top .hero-container-top-left p {
@@ -863,11 +864,6 @@ img {
   .hero-container .hero-container-top .hero-container-top-right img:hover {
     filter: grayscale(1);
     transform: scale(1);
-  }
-  .hero-container .hero-container-bottom {
-    background: linear-gradient(to right, #ec5cff, #82e8cc);
-    height: 3rem;
-    width: 100%;
   }
   .section-container {
     margin: 2rem auto;

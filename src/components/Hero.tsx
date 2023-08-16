@@ -9,7 +9,7 @@ export default function Hero (): JSX.Element {
           <p>
             ¡Me gusta destacar en los detalles!
             <span>
-              Por eso, doy lo mejor de mí para que tu web sea la más bonita. 💖
+            Y doy lo mejor de mí para que tu web sea la más bonita. 💖
             </span>
           </p>
           <a href="/lf-cv.pdf" download>
@@ -20,7 +20,6 @@ export default function Hero (): JSX.Element {
           <img src="/me.webp" alt="Foto de Luciano Fernández" />
         </article>
       </div>
-      <div className="hero-container-bottom" />
     </section>
   )
 }

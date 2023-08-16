@@ -4,7 +4,7 @@ import '../styles/styles.min.css'
 
 export const metadata: Metadata = {
   title: 'Luciano Fernández - Portafolio Web',
-  description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end',
+  description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end.',
   applicationName: 'Luciano Fernández',
   icons: '/lf-logo.png',
   themeColor: '#ec5cff',
