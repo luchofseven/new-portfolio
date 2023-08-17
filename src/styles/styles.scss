@@ -171,12 +171,6 @@ img {
         margin: 0;
         width: 60%;
         flex-grow: 0;
-
-        span {
-          letter-spacing: 0px;
-          font-size: 1rem;
-          display: block;
-        }
       }
 
       a {
@@ -320,9 +314,9 @@ img {
     margin: 0 auto;
     padding: .7rem 1rem;
     line-height: 24px;
-    width: 60%;
+    width: 50%;
 
-    &:first-child, &:last-child {
+    &:last-child {
       text-align: center;
     }
 
@@ -396,7 +390,7 @@ img {
   // GENERAL
   a,
   p {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
   // MAIN APP
@@ -551,10 +545,6 @@ img {
           padding: 0 1rem;
           width: 100%;
           text-align: center;
-
-          span {
-            display: block;
-          }
         }
 
         a {
@@ -936,10 +926,6 @@ img {
         line-height: 22px;
         margin: 0;
         width: 50%;
-
-        span {
-          display: block;
-        }
       }
 
       a {

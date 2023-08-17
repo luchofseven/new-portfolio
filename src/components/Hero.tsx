@@ -7,10 +7,7 @@ export default function Hero (): JSX.Element {
             Luciano Fernández<span>Desarrollador Frontend</span>
           </h1>
           <p>
-            ¡Me gusta destacar en los detalles!
-            <span>
-            Y doy lo mejor de mí para que tu web sea la más bonita. 💖
-            </span>
+            ¡Me gusta destacar en los detalles! Y doy lo mejor de mí para que tu web sea la más bonita. 💖
           </p>
           <a href="/lf-cv.pdf" download>
             Descargar CV

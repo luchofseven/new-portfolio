@@ -7,10 +7,7 @@ export default function AboutMe (): JSX.Element {
       <main className="about-me-container">
         <p>👋 ¡Hola! Soy Luciano. Quiero contarte que:</p>
         <p>
-          🧑‍💻 Inicié mis pasos en el mundo de la programación hace
-          aproximadamente más de 2 años. En todo este tiempo adquirí experiencia
-          en distintas tecnologías como: HTML, CSS, Sass, JavaScript, React,
-          Next.Js, Tailwind, entre otros.
+        🧑‍💻 Tengo más de 2 años de experiencia utilizando distintas tecnologías como: HTML, CSS, Sass, JavaScript, React, y aproximadamente 1 año empleando Next.Js y Tailwind, entre otros.
         </p>
         <p>
           🚀 Actualmente estoy realizando aplicaciones con TypeScript,
