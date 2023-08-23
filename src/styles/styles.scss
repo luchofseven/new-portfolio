@@ -202,12 +202,11 @@ img {
       overflow: hidden;
 
       img {
-        width: 380px;
-        filter: grayscale(1);
+        width: 440px;
         transition: all 200ms ease-in-out;
 
         &:hover {
-          filter: grayscale(0);
+          filter: grayscale(1);
           transform: scale(1.05);
         }
       }
@@ -577,13 +576,11 @@ img {
         overflow: hidden;
 
         img {
-          width: 80%;
-          max-width: 300px;
-          filter: grayscale(1);
+          width: 100%;
+          max-width: 350px;
           transition: none;
 
           &:hover {
-            filter: grayscale(1);
             transform: none;
           }
         }
@@ -956,24 +953,16 @@ img {
       overflow: hidden;
 
       img {
-        min-width: 240px;
-        max-width: 240px;
-        filter: grayscale(1);
+        min-width: 250px;
+        max-width: 250px;
         transition: none;
 
         &:hover {
-          filter: grayscale(1);
           transform: scale(1);
         }
       }
     }
   }
-
-  // .hero-container-bottom {
-  //   background: linear-gradient(to right, $second-color, $third-color);
-  //   height: 3rem;
-  //   width: 100%;
-  // }
 }
 
   // SECTIONS

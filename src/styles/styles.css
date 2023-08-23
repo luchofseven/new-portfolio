@@ -186,13 +186,12 @@ img {
 }
 
 .hero-container .hero-container-top .hero-container-top-right img {
-  width: 380px;
-  filter: grayscale(1);
+  width: 440px;
   transition: all 200ms ease-in-out;
 }
 
 .hero-container .hero-container-top .hero-container-top-right img:hover {
-  filter: grayscale(0);
+  filter: grayscale(1);
   transform: scale(1.05);
 }
 
@@ -527,13 +526,11 @@ img {
     overflow: hidden;
   }
   .hero-container .hero-container-top .hero-container-top-right img {
-    width: 80%;
-    max-width: 300px;
-    filter: grayscale(1);
+    width: 100%;
+    max-width: 350px;
     transition: none;
   }
   .hero-container .hero-container-top .hero-container-top-right img:hover {
-    filter: grayscale(1);
     transform: none;
   }
   .section-container {
@@ -844,13 +841,11 @@ img {
     overflow: hidden;
   }
   .hero-container .hero-container-top .hero-container-top-right img {
-    min-width: 240px;
-    max-width: 240px;
-    filter: grayscale(1);
+    min-width: 250px;
+    max-width: 250px;
     transition: none;
   }
   .hero-container .hero-container-top .hero-container-top-right img:hover {
-    filter: grayscale(1);
     transform: scale(1);
   }
   .section-container {
