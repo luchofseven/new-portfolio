@@ -9,7 +9,7 @@ export default function Projects (): JSX.Element {
       <main className="projects-projects">
         <Card
           img="/project-books-app.webp"
-          title="Libros &quot;Sorbil&quot;"
+          title="App de Libros"
           description="Aplicación en la cual se lista una cierta cantidad de libros, donde el usuario puede filtrar estos por su género y agregarlos a una lista de lectura. Construído con React, TypeScript y Sass."
           urlDeploy="https://books-app-pied.vercel.app/"
           urlRepo="https://github.com/luchofseven/books-app"

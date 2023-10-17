@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: 'Luciano Fernández - Portafolio Web',
   description: 'Mi portafolio personal, donde podrás encontrar mis proyectos y contactarte conmigo.',
   applicationName: 'Luciano Fernández',
-  icons: '/lf-logo.png',
+  icons: '/og-logo.png',
   themeColor: '#ec5cff',
   appleWebApp: { title: 'Luciano Fernández' },
-  twitter: { title: 'Luciano Fernández - Portafolio Web', card: 'summary_large_image', site: 'Luciano Fernández', creator: '@luchofseven', images: '/og-logo.png', description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end' },
-  openGraph: { title: 'Luciano Fernández - Portafolio Web', type: 'website', images: [{ url: '/og-logo.png' }], url: 'https://luchofseven.com.ar', description: 'Portafolio personal de Luciano Fernández, desarrollador web front-end', locale: 'es_ES', siteName: 'Luciano Fernández' }
+  twitter: { title: 'Luciano Fernández - Portafolio Web', card: 'summary_large_image', site: 'Luciano Fernández', creator: '@luchofseven', images: '/og-logo.png', description: 'Mi portafolio personal, donde podrás encontrar mis proyectos y contactarte conmigo.' },
+  openGraph: { title: 'Luciano Fernández - Portafolio Web', type: 'website', images: [{ url: '/og-logo.png' }], url: 'https://luchofseven.com.ar', description: 'Mi portafolio personal, donde podrás encontrar mis proyectos y contactarte conmigo.', locale: 'es_ES', siteName: 'Luciano Fernández' }
 }
 
 export default function RootLayout ({
