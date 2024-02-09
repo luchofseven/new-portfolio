@@ -46,6 +46,7 @@ export default function Navbar (): JSX.Element {
       <nav className={`navbar-nav ${menu ? 'is-active' : ''}`}>
         <ul>
           <a href="#projects">PROYECTOS</a>
+          <a href="#tech-stack">TECNOLOGÍAS</a>
           <a href="#about-me">SOBRE MÍ</a>
           <a href="#contact">CONTACTO</a>
         </ul>
@@ -54,6 +55,7 @@ export default function Navbar (): JSX.Element {
             href="https://github.com/luchofseven"
             rel="noreferrer"
             target="_blank"
+            aria-label='Visitar mi página de Github'
           >
             <GithubIcon />
           </a>
@@ -61,6 +63,7 @@ export default function Navbar (): JSX.Element {
             href="https://www.linkedin.com/in/luchofseven/"
             rel="noreferrer"
             target="_blank"
+            aria-label='Visitar mi página de Linkedin'
           >
             <LinkedinIcon />
           </a>

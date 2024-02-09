@@ -5,27 +5,32 @@ export default function AboutMe (): JSX.Element {
         <h2>SOBRE MÍ</h2>
       </header>
       <main className="about-me-container">
-        <p>👋 ¡Hola! Soy Luciano. Quiero contarte que:</p>
-        <p>
-        🧑‍💻 Tengo más de 2 años de experiencia utilizando distintas tecnologías como: HTML, CSS, Sass, JavaScript, React, y aproximadamente 1 año empleando Next.Js y Tailwind, entre otros.
-        </p>
-        <p>
-          🚀 Actualmente estoy realizando aplicaciones con TypeScript,
-          profundizando de tal manera para lograr dominar éste lenguaje.
-        </p>
-        <p>
-          🎯 Me encantaría formar parte del sector de desarrollo de una empresa
-          y/o contribuyendo a un proyecto contigo.
-        </p>
-        <p>
-          ✉️ Cualquiera sean tus dudas podés contactarme a través de mis medios
-          de
-          <span>
-            <a href="#contact"> contacto</a>
-          </span>
-          .
-        </p>
-        <p>¡Gracias! 😁</p>
+        <section className="about-me-container-section">
+          <p>👋 ¡Hola! Soy Luciano.</p>
+          <p>
+            🧑‍💻 Tengo más de 2 años de experiencia utilizando tecnologías como:{' '}
+            <i>HTML, CSS, Sass, JavaScript, React</i>. También hago uso de{' '}
+            <i>Next.Js, Tailwind, TypeScript, Node, NestJS</i>, entre otros.
+          </p>
+          <p>
+            🚀 Actualmente estoy realizando aplicaciones <i>full-stack</i>, con
+            tecnologías como <i>React, TypeScript, NestJS y MYSQL</i>, con el
+            fin de abarcar por completo el ecosistema de desarrollo web.
+          </p>
+          <p>
+            🎯 Estoy dispuesto y me encantaría formar parte de una empresa o
+            contribuir a un proyecto en conjunto.
+          </p>
+          <p>
+            ✉️ Cualquiera sean tus dudas podés contactarme a través de mis
+            medios de
+            <span>
+              <a href="#contact"> contacto</a>
+            </span>
+            .
+          </p>
+          <p>¡Gracias! 😁</p>
+        </section>
       </main>
     </section>
   )

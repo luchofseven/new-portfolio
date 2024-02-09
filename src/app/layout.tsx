@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { arimo, dmSerifDisplay } from '@/fonts/fonts'
+import { arimo, dmSerifDisplay, lilitaOne } from '@/fonts/fonts'
 import '../styles/styles.min.css'
 
 export const metadata: Metadata = {
@@ -19,8 +19,10 @@ export default function RootLayout ({
   children: React.ReactNode
 }): JSX.Element {
   return (
-    <html lang="es" className={`${arimo.variable} ${dmSerifDisplay.variable}`}>
-      <body>{children}</body>
+    <html lang="es" className={`${arimo.variable} ${dmSerifDisplay.variable} ${lilitaOne.variable}`}>
+      <body>
+        {children}
+      </body>
     </html>
   )
 }

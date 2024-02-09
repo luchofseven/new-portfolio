@@ -6,6 +6,15 @@ $white-color: #ffffff;
 $black-color: #000000;
 $border-card: #471b4d;
 $border-about-me: #00674c;
+$html-color: #e44d26;
+$css-color: #2299f8;
+$javascript-color: #f0dc4e;
+$typescript-color: #2d79c7;
+$sass-color: #cd669a;
+$tailwind-color: #38bdf8;
+$react-color: #61dbfb;
+$node-color: #43853d;
+$mysql-color: #007195;
 
 @mixin hover-scale {
   transform: scale(1.1);
@@ -65,7 +74,8 @@ img {
   position: sticky;
   top: 0;
   margin: 0 1rem;
-  background-color: $background-color;
+  background-color: rgba($color: $background-color, $alpha: 0.95);
+  backdrop-filter: blur(5px);
 
   .navbar-aside {
     width: auto;
@@ -92,7 +102,7 @@ img {
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
-    width: 60%;
+    width: fit-content;
 
     ul {
       width: 100%;
@@ -106,7 +116,9 @@ img {
       a {
         text-decoration: none;
         color: $white-color;
-        transition: all 200ms ease;
+        transition: transform 200ms ease, color 200ms ease;
+        width: fit-content;
+        text-wrap: nowrap;
 
         &:hover {
           @include hover-scale();
@@ -118,7 +130,7 @@ img {
     .navbar-nav-social {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1rem;
 
       a {
         color: $white-color;
@@ -138,6 +150,7 @@ img {
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
+  background-color: $background-color;
 
   .hero-container-top {
     display: flex;
@@ -146,12 +159,12 @@ img {
     height: 500px;
 
     .hero-container-top-left {
-      width: 80%;
+      width: 50%;
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 2rem 0rem;
+      padding: 2rem 0.5rem;
       gap: 1rem;
 
       h1 {
@@ -160,9 +173,11 @@ img {
         letter-spacing: 1px;
 
         span {
+          font-family: var(--font-dmSerifDisplay), sans-serif;
           color: $second-color;
-          font-size: 3rem;
+          font-size: 2rem;
           display: block;
+          letter-spacing: 1.5px;
         }
       }
 
@@ -171,25 +186,30 @@ img {
         margin: 0;
         width: 60%;
         flex-grow: 0;
-        text-wrap: balance;
+        text-wrap: pretty, balance;
       }
 
       a {
         margin-top: 2rem;
-        background-color: $background-color;
+        background-color: $second-color / 07;
         color: $white-color;
         text-align: center;
-        min-width: 25%;
+        min-width: 35%;
+        max-width: 35%;
         border: 2px solid $second-color;
         border-radius: 5rem;
         padding: 0.8rem 0;
         font-family: var(--font-arimo);
-        transition: background-color 200ms ease-in-out;
+        font-weight: bold;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
         cursor: pointer;
         text-decoration: none;
+        transition: transform 200ms ease, background-color 200ms ease;
 
         &:hover {
           background-color: $second-color;
+          transform: scale(1.05);
         }
       }
     }
@@ -234,24 +254,53 @@ img {
 
 .projects-projects {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 300px);
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .projects-card {
-  min-height: 300px;
   width: 100%;
   display: flex;
   gap: 1rem;
   border-radius: 0.5rem;
-  overflow: hidden;
-  background-color: rgba($color: $black-color, $alpha: 0.1);
-  border: 1px solid $border-card;
-  box-shadow: 0px 10px $second-color;
+  position: relative;
+  transition: transform 200ms ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 50;
+  }
+
+  &:first-child {
+    grid-column: 1 / 3;
+  }
+
+  &:nth-child(4) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+
+  &:nth-last-child(7) {
+    grid-column: 3 / 5;
+    grid-row: 3 / 4;
+  }
+
+  &:last-child {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
 
   .projects-card-img {
-    width: 30%;
+    aspect-ratio: auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     a {
       text-decoration: none;
@@ -261,42 +310,86 @@ img {
         height: 100%;
         object-fit: cover;
         object-position: center;
+        border-radius: 0.5rem;
       }
     }
   }
 
+  .projects-card-info.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .projects-card-info {
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 2rem 0;
+    padding: 1.5rem 0;
     padding-left: 1rem;
+    text-wrap: pretty, balance;
+    background-color: rgba($color: $black-color, $alpha: 0.75);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    width: auto;
+    left: -4px;
+    right: -4px;
+    top: -1px;
+    bottom: -1px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease-in-out;
+    border-radius: 0.5rem;
 
     h3 {
       color: $second-color;
-      letter-spacing: .5px;
-      font-size: 1.4rem;
+      letter-spacing: 0.5px;
+      font-size: 1.2rem;
     }
 
     p {
-      width: 80%;
+      width: 100%;
       line-height: 24px;
-      flex-grow: 1;
+      padding-right: 1rem;
+      flex-grow: 0;
+      text-wrap: pretty, balance;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      font-size: 0.9rem;
     }
 
     footer {
+      margin-top: 1.5rem;
       width: 100%;
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
+      font-size: 0.8rem;
 
       a {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        gap: 4px;
+        background-color: rgba($color: $white-color, $alpha: 0.2);
+        backdrop-filter: blur(5px);
+        padding: 0 1rem;
+        border: 1px solid $white-color;
+        border-radius: 5rem;
         text-decoration: none;
-        color: $third-color;
-        transition: color 200ms ease-in-out;
+        color: $white-color;
+        transition: color 200ms ease-in-out, transform 200ms ease-in-out,
+          background-color 200ms ease-in-out;
+        text-wrap: pretty, balance;
+        letter-spacing: 0.5px;
 
         &:hover {
-          color: $second-color;
+          transform: scale(1.05);
+          color: $black-color;
+          background-color: $white-color;
+        }
+
+        & svg {
+          width: 20px;
         }
       }
     }
@@ -305,21 +398,24 @@ img {
 
 // ABOUT ME
 .about-me-container {
-  background-color: rgba($color: $black-color, $alpha: 0.1);
-  border: 1px solid $border-about-me;
-  box-shadow: 0px 10px $third-color;
+  background: linear-gradient(to bottom, $third-color, $second-color);
   border-radius: 0.5rem;
-  padding: 1rem 0;
+  padding: 0px 2px 2px 2px;
+
+  section {
+    padding: 1rem 0;
+    background-color: $background-color;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    width: 100%;
+  }
 
   p {
     margin: 0 auto;
-    padding: .7rem 1rem;
+    padding: 0.7rem 1rem;
     line-height: 24px;
     width: 50%;
-
-    &:last-child {
-      text-align: center;
-    }
+    height: 100%;
+    text-wrap: pretty;
 
     span > a {
       color: $second-color;
@@ -329,9 +425,83 @@ img {
   }
 }
 
+// TECH STACK
+.tech-stack-container {
+  width: 100%;
+  border-radius: 0.5rem;
+  background: linear-gradient(to top, $third-color, $second-color);
+  padding: 2px 2px 0px 2px;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background-color;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    padding: 1rem;
+  }
+
+  .tech-stack {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  svg {
+    color: $white-color;
+    width: 32px;
+    height: 32px;
+    transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  }
+
+  .html-icon svg {
+    color: $html-color;
+  }
+
+  .css-icon svg {
+    color: $css-color;
+  }
+
+  .javascript-icon svg {
+    color: $javascript-color;
+  }
+
+  .react-icon svg {
+    color: $react-color;
+  }
+
+  .typescript-icon svg {
+    color: $typescript-color;
+  }
+
+  .sass-icon svg {
+    color: $sass-color;
+  }
+
+  .tailwind-icon svg {
+    color: $tailwind-color;
+  }
+
+  .nextjs-icon svg {
+    background-color: $white-color;
+    border: 1px solid $white-color;
+    border-radius: 50%;
+    color: $black-color;
+  }
+
+  .node-icon svg {
+    color: $node-color;
+  }
+
+  .mysql-icon svg {
+    color: $mysql-color;
+  }
+}
+
 // FOOTER
 .footer-container {
-  background: linear-gradient(to left, $second-color, $third-color);
+  background: linear-gradient(to bottom, $second-color, $border-card);
   border-radius: 0.5rem;
   width: 100%;
   height: 15rem;
@@ -357,7 +527,7 @@ img {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: $background-color;
+        color: $white-color;
         text-decoration: none;
         gap: 0.5rem;
         transition: transform 200ms ease-in-out;
@@ -387,11 +557,11 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   // GENERAL
   a,
   p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   // MAIN APP
@@ -442,6 +612,7 @@ img {
     .navbar-nav {
       background-color: $background-color;
       width: 100%;
+      min-height: 100vh;
       position: fixed;
       top: 5rem;
       left: 0;
@@ -450,7 +621,7 @@ img {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      gap: 3rem;
+      gap: 0rem;
       transition: transform 200ms ease-in-out;
       transform: translateX(100%);
       padding-top: 1rem;
@@ -468,6 +639,7 @@ img {
         justify-content: center;
         align-items: center;
         gap: 3rem;
+        background-color: $background-color;
 
         a {
           text-decoration: none;
@@ -488,6 +660,8 @@ img {
         justify-content: center;
         align-items: flex-start;
         gap: 3rem;
+        background-color: $background-color;
+        padding-top: 3rem;
 
         a {
           color: $white-color;
@@ -613,25 +787,31 @@ img {
 
   .projects-projects {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+    padding: 0rem;
   }
 
   .projects-card {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 0rem;
-    border-radius: 0.5rem;
+    border-radius: 0rem;
+    transition: transform 200ms ease-out;
+    background-color: $background-color;
     overflow: hidden;
-    background-color: rgba($color: $black-color, $alpha: 0.1);
-    border: 1px solid $border-card;
-    box-shadow: 0px 10px $second-color;
+    border-radius: 0.5rem;
+
+    &:hover {
+      transform: scale(1);
+      z-index: 50;
+    }
 
     .projects-card-img {
       width: 100%;
+      position: relative;
 
       a {
         text-decoration: none;
@@ -641,446 +821,114 @@ img {
           height: 100%;
           object-fit: cover;
           object-position: center;
+          border-radius: 0rem;
         }
       }
     }
 
     .projects-card-info {
       width: 100%;
-      min-height: 250px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 0 1rem;
+      padding: 1rem;
+      text-wrap: pretty, balance;
+      background-color: $background-color;
+      backdrop-filter: blur(0);
+      position: relative;
+      width: 100%;
+      left: 0px;
+      right: 0px;
+      top: -5px;
+      bottom: 0px;
+      opacity: 1;
+      visibility: visible;
+      transition: none;
+      border-radius: 0rem 0rem 0.5rem 0.5rem;
+      border-left: 1px solid $second-color;
+      border-right: 1px solid $second-color;
+      box-shadow: 0px 10px $second-color;
 
       h3 {
-        font-size: 1.1rem;
         color: $second-color;
+        letter-spacing: 0.5px;
+        font-size: 1.2rem;
       }
 
       p {
         width: 100%;
         line-height: 24px;
+        padding-right: 1rem;
+        flex-grow: 1;
+        text-wrap: pretty, balance;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        font-size: 0.9rem;
       }
 
       footer {
+        margin-top: 3rem;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-
-        a {
-          text-decoration: none;
-          color: $third-color;
-          transition: none;
-
-          &:hover {
-            color: $third-color;
-          }
-        }
-      }
-    }
-  }
-
-  // ABOUT ME
-  .about-me-container {
-    background-color: rgba($color: $black-color, $alpha: 0.1);
-    border: 1px solid $border-about-me;
-    box-shadow: 0px 10px $third-color;
-    border-radius: 0.5rem;
-
-    p {
-      margin: 0.5rem auto;
-      padding: 0.8rem 1rem;
-      line-height: 24px;
-      width: 100%;
-
-      &:first-child, &:last-child {
-        text-align: start;
-      }
-
-      span > a {
-        color: $second-color;
-        font-weight: bold;
-        text-decoration: none;
-      }
-    }
-  }
-
-  // FOOTER
-  .footer-container {
-    background: linear-gradient(to left, $second-color, $third-color);
-    border-radius: 0.5rem;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
-    margin-top: 0rem;
-    padding: 2rem 0;
-
-    .footer-info {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      div {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         gap: 1rem;
 
         a {
           display: flex;
           align-items: center;
-          justify-content: center;
-          color: $white-color;
+          justify-items: center;
+          gap: 4px;
+          background-color: rgba($color: $white-color, $alpha: 0.2);
+          backdrop-filter: blur(5px);
+          padding: 0 1rem;
+          border: 1px solid $white-color;
+          border-radius: 5rem;
           text-decoration: none;
-          gap: 0.5rem;
-          transition: none;
+          color: $white-color;
+          transition: color 200ms ease-in-out, transform 200ms ease-in-out,
+            background-color 200ms ease-in-out;
+          text-wrap: pretty, balance;
+          letter-spacing: 0.5px;
+          font-size: 0.7rem;
 
           &:hover {
-            color: $white-color;
             transform: scale(1);
+            color: $black-color;
+            background-color: $white-color;
+          }
+
+          & svg {
+            width: 20px;
           }
         }
       }
     }
+  }
 
-    .footer-logo {
-      width: 100%;
+  // TECH STACK
+  .tech-stack-container {
+    .tech-stack {
       display: flex;
-      justify-content: center;
       align-items: center;
-
-      img {
-        width: 80px;
-        height: auto;
-        transition: none;
-
-        &:hover {
-          transform: scale(1);
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1023px) {
-
-  // GENERAL
-  a,
-  p {
-    font-size: 1rem;
-  }
-
-  // MAIN APP
-  .main-app {
-    width: 100%;
-    margin: 0 auto 1rem auto;
-    padding: 0rem 1rem;
-    overflow: hidden;
-  }
-
-  // NAVBAR
-  .navbar-header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 5rem;
-    z-index: 100;
-    margin: 0;
-    padding: 0 1rem;
-    background-color: $background-color;
-
-    .navbar-aside {
-      width: auto;
-      height: auto;
-
-      img {
-        width: 50px;
-        height: auto;
-        transition: none;
-
-        &:hover {
-          transform: scale(1);
-        }
-      }
-    }
-
-    button {
-      display: block;
-      background-color: transparent;
-      border: none;
-      color: $white-color;
-    }
-
-    .navbar-nav {
-      background-color: $background-color;
-      width: 100%;
-      position: fixed;
-      top: 5rem;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 3rem;
-      transition: transform 200ms ease-in-out;
-      transform: translateX(100%);
-
-      &.is-active {
-        transform: translateX(0);
-      }
-
-      ul {
-        width: 100%;
-        padding: 0;
-        margin: 1rem auto 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-
-        a {
-          text-decoration: none;
-          font-weight: normal;
-          color: $white-color;
-          transition: none;
-
-          &:hover {
-            transform: scale(1);
-            color: $white-color;
-          }
-        }
-      }
-
-      .navbar-nav-social {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 3rem;
-
-        a {
-          color: $white-color;
-          fill: $white-color;
-          transition: none;
-
-          &:hover {
-            transform: scale(1);
-            color: $white-color;
-          }
-        }
-      }
-    }
-  }
-
-  // HERO
-.hero-container {
-  position: relative;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  margin-top: 5rem;
-
-  .hero-container-top {
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 300px;
-
-    .hero-container-top-left {
-      width: 70%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: .5rem;
-      padding: 1rem 0;
-
-      h1 {
-        font-family: var(--font-dmSerifDisplay), sans-serif;
-        font-size: 2.7rem;
-        letter-spacing: 1px;
-
-        span {
-          color: $second-color;
-          font-size: 2rem;
-          display: block;
-        }
-      }
-
-      p {
-        line-height: 22px;
-        margin: 0;
-        width: 50%;
-      }
-
-      a {
-        background-color: $background-color;
-        color: $white-color;
-        text-align: center;
-        min-width: 25%;
-        border: 1px solid $second-color;
-        border-radius: 5rem;
-        padding: 0.7rem 0;
-        font-family: var(--font-arimo);
-        cursor: pointer;
-        text-decoration: none;
-        transition: none;
-
-        &:hover {
-          background-color: $background-color;
-        }
-      }
-    }
-
-    .hero-container-top-right {
-      width: 30%;
-      height: 100%;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      overflow: hidden;
-
-      img {
-        min-width: 250px;
-        max-width: 250px;
-        transition: none;
-
-        &:hover {
-          transform: scale(1);
-        }
-      }
-    }
-  }
-}
-
-  // SECTIONS
-
-  .section-container {
-    margin: 2rem auto;
-    width: 100%;
-    scroll-margin-top: 5rem;
-
-    .section-title {
-      height: 5rem;
-      display: flex;
       justify-content: center;
-      align-items: center;
-
-      h2 {
-        font-size: 1.1rem;
-      }
-    }
-  }
-
-  // PROJECTS
-
-  .projects-projects {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .projects-card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    background-color: rgba($color: $black-color, $alpha: 0.1);
-    border: 1px solid $border-card;
-    box-shadow: 0px 10px $second-color;
-
-    .projects-card-img {
-      width: 100%;
-
-      a {
-        text-decoration: none;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-      }
-    }
-
-    .projects-card-info {
-      width: 100%;
-      min-height: 250px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0 1rem;
-
-      h3 {
-        font-size: 1.1rem;
-        color: $second-color;
-      }
-
-      p {
-        width: 100%;
-        line-height: 22px;
-      }
-
-      footer {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        a {
-          text-decoration: none;
-          color: $third-color;
-          transition: none;
-
-          &:hover {
-            color: $third-color;
-          }
-        }
-      }
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1rem;
     }
   }
 
   // ABOUT ME
   .about-me-container {
-    background-color: rgba($color: $black-color, $alpha: 0.1);
-    border: 1px solid $border-about-me;
-    box-shadow: 0px 10px $third-color;
-    border-radius: 0.5rem;
-
     p {
       margin: 0.5rem auto;
       padding: 0.8rem 1rem;
-      line-height: 22px;
-
-      span > a {
-        color: $second-color;
-        font-weight: bold;
-        text-decoration: none;
-      }
+      line-height: 24px;
+      width: 100%;
     }
   }
 
   // FOOTER
   .footer-container {
-    background: linear-gradient(to left, $second-color, $third-color);
+    background: linear-gradient(to bottom, $second-color, $border-card);
     border-radius: 0.5rem;
     width: 100%;
     height: auto;
