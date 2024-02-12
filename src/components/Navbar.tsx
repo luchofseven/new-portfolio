@@ -46,8 +46,8 @@ export default function Navbar (): JSX.Element {
       <nav className={`navbar-nav ${menu ? 'is-active' : ''}`}>
         <ul>
           <a href="#projects">PROYECTOS</a>
-          <a href="#tech-stack">TECNOLOGÍAS</a>
           <a href="#about-me">SOBRE MÍ</a>
+          <a href="#tech-stack">TECNOLOGÍAS</a>
           <a href="#contact">CONTACTO</a>
         </ul>
         <article className="navbar-nav-social">

@@ -12,8 +12,8 @@ export default function Home (): JSX.Element {
       <main className="main-app">
         <Hero />
         <Projects />
-        <TechStack />
         <AboutMe />
+        <TechStack />
         <Footer />
       </main>
   </>

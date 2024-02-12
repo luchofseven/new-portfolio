@@ -36,6 +36,7 @@ export default function Card ({
     >
       <div className="projects-card-img">
         <a href={urlDeploy} rel="noreferrer" target="_blank">
+          <span />
           <img src={img} alt={`Foto portada del proyecto ${title}`} />
         </a>
       </div>
