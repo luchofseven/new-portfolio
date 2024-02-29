@@ -226,7 +226,7 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 300px);
-  gap: 0.5rem;
+  gap: 1rem;
   padding: 1rem;
 }
 
@@ -254,13 +254,13 @@ img {
 }
 
 .projects-card:nth-last-child(7) {
-  grid-column: 3 / 5;
+  grid-column: 2 / 5;
   grid-row: 3 / 4;
 }
 
 .projects-card:last-child {
   grid-column: 1 / 2;
-  grid-row: 2 / 4;
+  grid-row: 2 / 3;
 }
 
 .projects-card .projects-card-img {
@@ -281,7 +281,8 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0px 0px 50px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.9);
+  border-radius: .5rem;
 }
 
 .projects-card .projects-card-img a img {
@@ -289,7 +290,7 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   z-index: 5;
 }
 
