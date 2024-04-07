@@ -42,13 +42,13 @@ export default function Projects (): JSX.Element {
           urlDeploy="https://movies-search-app-phi.vercel.app/"
           urlRepo="https://github.com/luchofseven/movies-search-app"
         />
-        <Card
+        {/* <Card
           img="/project-bonsai.webp"
           title="Bonsai Clon"
           description='Clonación del sitio web de Bonsai, en el cual se puede elegir y simular el cambio de planes y precios. Proyecto obtenido de "Front-end Practice". El sitio está construído con React y Sass.'
           urlDeploy="https://bonsai-proyecto-react.vercel.app/"
           urlRepo="https://github.com/luchofseven/bonsai-proyecto-react"
-        />
+        /> */}
         <Card
           img="/project-mohana-indumentaria.webp"
           title="Mohana Indumentaria"
