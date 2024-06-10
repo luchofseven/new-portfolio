@@ -9,6 +9,7 @@ interface CardInfo {
   description: string
   urlDeploy: string
   urlRepo: string
+  lastProject?: boolean
 }
 
 export default function Card ({
@@ -16,7 +17,8 @@ export default function Card ({
   title,
   description,
   urlDeploy,
-  urlRepo
+  urlRepo,
+  lastProject = false
 }: CardInfo): JSX.Element {
   const [cardInfo, setCardInfo] = useState(false)
 
@@ -34,6 +36,11 @@ export default function Card ({
       onMouseEnter={handleOnMouseEnter}
       onMouseLeave={handleOnMouseLeave}
     >
+      {lastProject && (
+        <div className={`${lastProject ? 'last-project' : ''}`}>
+          <p>¡Último proyecto!</p>
+        </div>
+      )}
       <div className="projects-card-img">
         <a href={urlDeploy} rel="noreferrer" target="_blank">
           <span />
