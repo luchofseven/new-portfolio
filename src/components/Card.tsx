@@ -8,7 +8,7 @@ interface CardInfo {
   title: string
   description: string
   urlDeploy: string
-  urlRepo: string
+  urlRepo?: string
   lastProject?: boolean
 }
 
@@ -55,10 +55,12 @@ export default function Card ({
             <VisitWebsiteIcon />
             Visitar
           </a>
-          <a href={urlRepo} rel="noreferrer" target="_blank">
-            <GithubIcon />
-            GitHub
-          </a>
+          {urlRepo !== undefined &&
+            <a href={urlRepo} rel="noreferrer" target="_blank">
+              <GithubIcon />
+              GitHub
+            </a>
+          }
         </footer>
       </div>
     </article>
