@@ -16,7 +16,7 @@ export default function TechStack () {
     <section id="tech-stack" className="section-container tech-stack-container">
       <article>
         <header className="section-title">
-          <h2>TECNOLOGÍAS</h2>
+          <h2>MIS TECNOLOGÍAS</h2>
         </header>
         <div className="tech-stack">
           <span className="html-icon">

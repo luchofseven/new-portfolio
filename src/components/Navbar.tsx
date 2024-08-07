@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { GithubIcon, LinkedinIcon, MenuOpenIcon, MenuCloseIcon } from '../icons/Icons'
+import { MenuOpenIcon, MenuCloseIcon } from '../icons/Icons'
 
 export default function Navbar (): JSX.Element {
   const [menu, setMenu] = useState(false)
@@ -50,24 +50,6 @@ export default function Navbar (): JSX.Element {
           <a href="#tech-stack">TECNOLOGÍAS</a>
           <a href="#contact">CONTACTO</a>
         </ul>
-        <article className="navbar-nav-social">
-          <a
-            href="https://github.com/luchofseven"
-            rel="noreferrer"
-            target="_blank"
-            aria-label='Visitar mi página de Github'
-          >
-            <GithubIcon />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/luchofseven/"
-            rel="noreferrer"
-            target="_blank"
-            aria-label='Visitar mi página de Linkedin'
-          >
-            <LinkedinIcon />
-          </a>
-        </article>
       </nav>
     </header>
   )

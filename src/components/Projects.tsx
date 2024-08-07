@@ -15,20 +15,20 @@ export default function Projects (): JSX.Element {
           // urlRepo="https://github.com/luchofseven/books-app"
           lastProject={true}
         />
-        <Card
+        {/* <Card
           img="/project-books-app.webp"
           title="App de Libros"
           description="Aplicación en la cual se lista una cierta cantidad de libros, donde el usuario puede filtrar estos por su género y agregarlos a una lista de lectura. Construído con React, TypeScript y Sass."
           urlDeploy="https://books-app-pied.vercel.app/"
           urlRepo="https://github.com/luchofseven/books-app"
-        />
-        <Card
+        /> */}
+        {/* <Card
           img="/project-municipalidad-vera.webp"
           title="Muncipalidad de Vera"
           description="Sitio web en el cual se realizó un rediseño de la página oficial de dicha municipalidad. Construído con React y TypeScript."
           urlDeploy="https://municipalidad-vera.vercel.app/"
           urlRepo="https://github.com/luchofseven/municipalidad-vera"
-        />
+        /> */}
         <Card
           img="/project-tesla-landing.webp"
           title="Tesla Clon"
@@ -57,13 +57,13 @@ export default function Projects (): JSX.Element {
           urlDeploy="https://bonsai-proyecto-react.vercel.app/"
           urlRepo="https://github.com/luchofseven/bonsai-proyecto-react"
         /> */}
-        <Card
+        {/* <Card
           img="/project-mohana-indumentaria.webp"
           title="Mohana Indumentaria"
           description="Proyecto a modo de simular un comercio electrónico, dónde se pueden ver los productos disponibles, su stock, sus talles, así como también poder añadirlos al carrito de compras. Sitio construído con React y Firebase."
           urlDeploy="https://mohana-proyecto-react.vercel.app/"
           urlRepo="https://github.com/luchofseven/mohana-proyecto-react"
-        />
+        /> */}
         <Card
           img="/project-mohana.webp"
           title="Mohana Indumentaria"

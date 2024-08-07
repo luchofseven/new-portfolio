@@ -3,7 +3,6 @@ import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import Projects from '@/components/Projects'
 import AboutMe from '@/components/AboutMe'
-import TechStack from '@/components/TechStack'
 
 export default function Home (): JSX.Element {
   return (
@@ -13,7 +12,6 @@ export default function Home (): JSX.Element {
         <Hero />
         <Projects />
         <AboutMe />
-        <TechStack />
         <Footer />
       </main>
   </>
