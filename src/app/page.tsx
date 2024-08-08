@@ -7,15 +7,15 @@ import FooterMessage from '@/components/FooterMessage'
 
 export default function Home (): JSX.Element {
   return (
-  <>
+    <>
       <Navbar />
-      <main className="main-app">
+      <section className="main-app">
         <Hero />
         <Projects />
         <AboutMe />
         <Footer />
         <FooterMessage />
-      </main>
-  </>
+      </section>
+    </>
   )
 }

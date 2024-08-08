@@ -81,11 +81,22 @@ img {
   justify-content: space-between;
   height: 5rem;
   z-index: 100;
-  position: sticky;
+  position: fixed;
   top: 0;
-  margin: 0 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   background-color: rgba($color: $background-color, $alpha: 0.95);
   backdrop-filter: blur(5px);
+
+  .navbar-header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
 
   .navbar-aside {
     width: auto;
@@ -141,10 +152,10 @@ img {
 
 // HERO
 .hero-container {
-  margin-top: 2rem;
+  margin-top: 6rem;
   position: relative;
   border-radius: 0;
-  overflow: hidden;
+  overflow: visible;
   background-color: $background-color;
 
   .hero-container-top {
@@ -198,10 +209,11 @@ img {
         font-size: 0.9rem;
         cursor: pointer;
         text-decoration: none;
-        transition: background-color 300ms ease;
+        transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
 
         &:hover {
           background-color: $second-color;
+          transform: scale(1.05);
         }
       }
     }
@@ -259,37 +271,32 @@ img {
 
 .projects-projects {
   width: 100%;
-  // display: grid;
-  // grid-template-columns: repeat(4, 1fr);
-  // grid-template-rows: repeat(3, 300px);
-  // gap: 1rem;
-  // padding: 1rem;
-  // background-color: rgba($color: $border-card, $alpha: .1);
-  // border-radius: .5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 .projects-card {
-  padding: 1rem;
-  width: 40%;
-  max-height: 300px;
+  width: 100%;
+  max-height: 450px;
   display: flex;
   gap: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   position: relative;
   transition: transform 200ms ease-out;
-  border: 2px solid rgba($color: $border-card, $alpha: 0.8);
-  background-color: rgba($color: $border-card, $alpha: 0.3);
-  color: $white-color;
+
+  &:hover .projects-card-img a img {
+    opacity: 0.6;
+  }
 
   .last-project {
     position: absolute;
-    background-color: $second-color;
-    height: 30px;
-    width: 120px;
+    background-color: $border-card;
+    color: $white-color;
+    border: 2px solid $second-color;
+    height: 35px;
+    width: 140px;
     top: -10px;
     left: -12px;
     border-radius: 0.5rem;
@@ -313,44 +320,30 @@ img {
     grid-column: 1 / 3;
   }
 
-  &:nth-child(4) {
-    // TODO App
-    grid-column: 4 / 5;
-    grid-row: 1 / 3;
+  &:nth-last-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   &:nth-last-child(3) {
     // Movies Search App
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
+    grid-column: 1 / 1;
+    grid-row: 2 / 3;
   }
 
-  &:nth-last-child(2) {
-    // Mohana React App
-    grid-column: -1 / 3;
-    grid-row: 3 / 4;
-  }
-
-  &:nth-last-child(7) {
-    // BOOKS App
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
+  &:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   &:last-child {
-    // MOHANA App
-    grid-column: 2 / 4;
+    grid-column: 3 / 4;
     grid-row: 2 / 3;
   }
 
   .projects-card-img {
     aspect-ratio: auto;
     width: 100%;
-    // position: absolute;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
 
     a {
       text-decoration: none;
@@ -359,9 +352,7 @@ img {
         position: absolute;
         width: 100%;
         height: 100%;
-        // box-shadow: inset 0px 0px 50px 5px
-        //   rgba($color: $black-color, $alpha: 0.7);
-        border-radius: 0.5rem;
+        border-radius: 1rem;
       }
 
       img {
@@ -369,17 +360,12 @@ img {
         height: 100%;
         object-fit: cover;
         object-position: center;
-        border-radius: 0.5rem;
+        border-radius: 1rem;
         z-index: 5;
-        mask-image: linear-gradient(to top, transparent 1%, $black-color 50%);
+        mask-image: linear-gradient(to top, transparent 1%, $black-color 10%);
+        transition: opacity 200ms ease-in-out;
       }
     }
-  }
-
-  .projects-card-info.is-active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0%);
   }
 
   .projects-card-info {
@@ -391,19 +377,24 @@ img {
     padding-left: 2rem;
     padding-bottom: 1.5rem;
     text-wrap: pretty, balance;
-    // background-color: rgba($color: $black-color, $alpha: 0.3);
-    // backdrop-filter: blur(1px);
-    background-color: rgba($color: $background-color, $alpha: 0.8);
+    background: linear-gradient(to top, #0e0012 15%, transparent);
     position: absolute;
     width: auto;
-    left: -4px;
-    right: -4px;
+    left: -1px;
+    right: -1px;
     top: -1px;
     bottom: -1px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 200ms ease-in-out;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+
+    &:hover {
+      .projects-card-info-container {
+        opacity: 1;
+      }
+    }
+
+    .projects-card-info-container {
+      opacity: 0.7;
+    }
 
     h3 {
       color: $second-color;
@@ -416,7 +407,7 @@ img {
       line-height: 24px;
       padding-right: 1rem;
       flex-grow: 0;
-      text-wrap: pretty, balance;
+      text-wrap: balance;
       overflow-y: scroll;
       scrollbar-width: none;
       font-size: 0.9rem;
@@ -463,12 +454,11 @@ img {
   display: grid;
   grid-template-columns: 1fr 300px;
   grid-template-rows: auto auto;
-  gap: 1rem;
+  gap: 1.5rem;
 
   .about-me-container-section {
     background: radial-gradient(ellipse at top, #471b4d 10%, transparent),
       radial-gradient(ellipse at bottom, #ec5cff40, transparent);
-    border: 2px solid $border-card;
     border-radius: 1rem;
     grid-column: 1 / 2;
     padding: 1rem 2rem;
@@ -506,7 +496,6 @@ img {
   .about-me-container-article-first {
     grid-column: 2 / 3;
     background-color: rgba($color: $border-card, $alpha: 0.2);
-    border: 2px solid $border-card;
     border-radius: 1rem;
     padding: 1rem 0rem;
     position: relative;
@@ -530,7 +519,7 @@ img {
       height: auto;
       width: 120%;
       opacity: 20%;
-      transform: rotate(30deg);
+      rotate: 20deg;
       animation: hobbies-movement 2s ease-in-out infinite alternate both;
     }
 
@@ -599,7 +588,6 @@ img {
   .about-me-container-article-second {
     grid-column: 1 / 3;
     background-color: rgba($color: $border-card, $alpha: 0.2);
-    border: 2px solid $border-card;
     border-radius: 1rem;
   }
 

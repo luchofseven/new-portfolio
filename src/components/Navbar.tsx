@@ -32,25 +32,27 @@ export default function Navbar (): JSX.Element {
 
   return (
     <header className="navbar-header">
-      <aside className="navbar-aside">
-        <a href="#">
-          <Image
-            src="/lf-logo.webp"
-            alt="Logo de Luciano Fernández"
-            width={100}
-            height={100}
-          />
-        </a>
-      </aside>
-      <button onClick={handleClick}>{menu ? <MenuOpenIcon /> : <MenuCloseIcon /> }</button>
-      <nav className={`navbar-nav ${menu ? 'is-active' : ''}`}>
-        <ul>
-          <a href="#projects">PROYECTOS</a>
-          <a href="#about-me">SOBRE MÍ</a>
-          <a href="#tech-stack">TECNOLOGÍAS</a>
-          <a href="#contact">CONTACTO</a>
-        </ul>
-      </nav>
+      <div className='navbar-header-container'>
+        <aside className="navbar-aside">
+          <a href="#">
+            <Image
+              src="/lf-logo.webp"
+              alt="Logo de Luciano Fernández"
+              width={100}
+              height={100}
+            />
+          </a>
+        </aside>
+        <button onClick={handleClick}>{menu ? <MenuOpenIcon /> : <MenuCloseIcon /> }</button>
+        <nav className={`navbar-nav ${menu ? 'is-active' : ''}`}>
+          <ul>
+            <a href="#projects">PROYECTOS</a>
+            <a href="#about-me">SOBRE MÍ</a>
+            <a href="#tech-stack">TECNOLOGÍAS</a>
+            <a href="#contact">CONTACTO</a>
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }

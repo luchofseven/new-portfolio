@@ -48,20 +48,22 @@ export default function Card ({
         </a>
       </div>
       <div className={`projects-card-info ${cardInfo ? 'is-active' : ''}`}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <footer>
-          <a href={urlDeploy} rel="noreferrer" target="_blank">
-            <VisitWebsiteIcon />
-            Visitar
-          </a>
-          {urlRepo !== undefined &&
-            <a href={urlRepo} rel="noreferrer" target="_blank">
-              <GithubIcon />
-              GitHub
+        <div className='projects-card-info-container'>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <footer>
+            <a href={urlDeploy} rel="noreferrer" target="_blank">
+              <VisitWebsiteIcon />
+              Visitar
             </a>
-          }
-        </footer>
+            {urlRepo !== undefined && (
+              <a href={urlRepo} rel="noreferrer" target="_blank">
+                <GithubIcon />
+                GitHub
+              </a>
+            )}
+          </footer>
+        </div>
       </div>
     </article>
   )
