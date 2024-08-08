@@ -408,12 +408,43 @@ img {
   padding: 1rem 2rem;
 }
 
+.about-me-container .about-me-container-section img {
+  animation: aboutme-movement 2s ease-in-out infinite alternate both;
+}
+
+.about-me-container .about-me-container-section .vector-rocket {
+  rotate: 15deg;
+}
+
+@keyframes aboutme-movement {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.about-me-container .about-me-container-section div {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.about-me-container .about-me-container-section div img {
+  width: 35px;
+  filter: drop-shadow(5px 1px 3px rgba(0, 0, 0, 0.8));
+}
+
 .about-me-container .about-me-container-article-first {
   grid-column: 2 / 3;
   background-color: rgba(71, 27, 77, 0.2);
   border: 2px solid #471b4d;
   border-radius: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
+  position: relative;
+  overflow: hidden;
+  max-height: 450px;
 }
 
 .about-me-container .about-me-container-article-first > h2 {
@@ -421,34 +452,85 @@ img {
   text-align: center;
 }
 
+.about-me-container .about-me-container-article-first .hobbies-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 120%;
+  opacity: 20%;
+  transform: rotate(30deg);
+  animation: hobbies-movement 2s ease-in-out infinite alternate both;
+}
+
+@keyframes hobbies-movement {
+  0% {
+    transform: translateY(3%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.about-me-container .about-me-container-article-first .hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+  gap: .5rem;
+  padding: .5rem;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-top: .5rem;
+}
+
+.about-me-container .about-me-container-article-first .hobbies-grid span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 100px;
+  transition: transform 200ms ease-in-out;
+  filter: saturate(80%);
+}
+
+.about-me-container .about-me-container-article-first .hobbies-grid span .shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  box-shadow: inset 2px 2px 35px black;
+}
+
+.about-me-container .about-me-container-article-first .hobbies-grid span img {
+  transform: rotate(0deg);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+}
+
+.about-me-container .about-me-container-article-first .hobbies-grid span:hover {
+  transform: scale(1.05);
+  filter: saturate(100%);
+}
+
 .about-me-container .about-me-container-article-second {
   grid-column: 1 / 3;
   background-color: rgba(71, 27, 77, 0.2);
   border: 2px solid #471b4d;
   border-radius: 1rem;
-}
-
-.about-me-container div {
-  display: flex;
-  align-items: center;
-  gap: .8rem;
-}
-
-.about-me-container div img {
-  filter: drop-shadow(5px 1px 3px rgba(0, 0, 0, 0.8));
-}
-
-.about-me-container div:first-child img {
-  transform: rotate(0deg);
-}
-
-.about-me-container div:nth-child(3) img {
-  transform: rotate(0deg);
-}
-
-.about-me-container div img {
-  width: 35px;
-  transform: rotate(20deg);
 }
 
 .about-me-container p {

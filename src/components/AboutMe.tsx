@@ -20,7 +20,7 @@ export default function AboutMe (): JSX.Element {
             </p>
           </div>
           <div>
-            <img src="/vectors/cohete-3d.png" alt="vector cohete 3d" />
+            <img src="/vectors/cohete-3d.png" alt="vector cohete 3d" className='vector-rocket'/>
             <p>
               Actualmente estoy realizando aplicaciones <i>full-stack</i>, con
               tecnologías como <i>React, TypeScript, NestJS y MYSQL</i>, con el
@@ -46,13 +46,35 @@ export default function AboutMe (): JSX.Element {
           <p>¡Gracias por tu atención!</p>
         </section>
         <article className="about-me-container-article-first">
-          <h2>HOBBIES</h2>
+          <h2>PASATIEMPOS</h2>
           <div>
             <img
               src="/vectors/palanca-de-mando-3d.png"
               alt="vector palanca de mando 3d"
+              className='hobbies-image'
             />
-            <p>Jugar videojuegos</p>
+            <aside className='hobbies-grid'>
+              <span>
+                <span className='shadow'></span>
+                <img src="/hobbies/btf2042.png" alt="icono de battlefield 2042" />
+              </span>
+              <span>
+                <span className='shadow'></span>
+                <img src="/hobbies/btf5.jpg" alt="icono de battlefield 5" />
+              </span>
+              <span>
+                <span className='shadow'></span>
+                <img src="/hobbies/btf1.webp" alt="icono de battlefield 1" />
+              </span>
+              <span>
+                <span className='shadow'></span>
+                <img src="/hobbies/btf4.jpg" alt="icono de battlefield 4" />
+              </span>
+              <span>
+                <span className='shadow'></span>
+                <img src="/hobbies/cs2.png" alt="icono de counter-strike 2" />
+              </span>
+            </aside>
           </div>
         </article>
         <article className="about-me-container-article-second">
