@@ -3,11 +3,15 @@ import TechStack from './TechStack'
 export default function AboutMe (): JSX.Element {
   return (
     <section id="about-me" className="section-container">
+
       <header className="section-title">
         <h2>SOBRE MÍ</h2>
       </header>
+
       <main className="about-me-container">
+
         <section className="about-me-container-section">
+
           <div>
             <img
               src="/vectors/computadora-3d.png"
@@ -19,14 +23,20 @@ export default function AboutMe (): JSX.Element {
               <i>Next.Js, Tailwind, TypeScript, Node, NestJS</i>, entre otros.
             </p>
           </div>
+
           <div>
-            <img src="/vectors/cohete-3d.png" alt="vector cohete 3d" className='vector-rocket'/>
+            <img
+              src="/vectors/cohete-3d.png"
+              alt="vector cohete 3d"
+              className="vector-rocket"
+            />
             <p>
               Actualmente estoy realizando aplicaciones <i>full-stack</i>, con
               tecnologías como <i>React, TypeScript, NestJS y MYSQL</i>, con el
               fin de abarcar por completo el ecosistema de desarrollo web.
             </p>
           </div>
+
           <div>
             <img src="/vectors/objetivo-3d.png" alt="vector objetivo 3d" />
             <p>
@@ -43,44 +53,56 @@ export default function AboutMe (): JSX.Element {
             </span>
             .
           </p>
+
           <p>¡Gracias por tu atención!</p>
+
         </section>
+
         <article className="about-me-container-article-first">
+
           <h2>PASATIEMPOS</h2>
+
           <div>
             <img
               src="/vectors/palanca-de-mando-3d.png"
               alt="vector palanca de mando 3d"
-              className='hobbies-image'
+              className="hobbies-image"
             />
-            <aside className='hobbies-grid'>
+            <aside className="hobbies-grid">
               <span>
-                <span className='shadow'></span>
-                <img src="/hobbies/btf2042.png" alt="icono de battlefield 2042" />
+                <span className="shadow"></span>
+                <img
+                  src="/hobbies/btf2042.png"
+                  alt="icono de battlefield 2042"
+                />
               </span>
               <span>
-                <span className='shadow'></span>
+                <span className="shadow"></span>
                 <img src="/hobbies/btf5.jpg" alt="icono de battlefield 5" />
               </span>
               <span>
-                <span className='shadow'></span>
+                <span className="shadow"></span>
                 <img src="/hobbies/btf1.webp" alt="icono de battlefield 1" />
               </span>
               <span>
-                <span className='shadow'></span>
+                <span className="shadow"></span>
                 <img src="/hobbies/btf4.jpg" alt="icono de battlefield 4" />
               </span>
               <span>
-                <span className='shadow'></span>
+                <span className="shadow"></span>
                 <img src="/hobbies/cs2.png" alt="icono de counter-strike 2" />
               </span>
             </aside>
           </div>
+
         </article>
+
         <article className="about-me-container-article-second">
           <TechStack />
         </article>
+
       </main>
+
     </section>
   )
 }

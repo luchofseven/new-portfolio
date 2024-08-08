@@ -21,8 +21,8 @@ $mysql-color: #007195;
 }
 
 @font-face {
-  font-family: 'HKGroteskWide';
-  src: url('../../public/fonts/HKGroteskWide-Black.woff2');
+  font-family: "HKGroteskWide";
+  src: url("../../public/fonts/HKGroteskWide-Black.woff2");
   font-display: swap;
   font-weight: 900;
 }
@@ -73,7 +73,9 @@ img {
 
 // NAVBAR
 .navbar-header {
-  font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -231,7 +233,6 @@ img {
           transform: scale(1.05);
         }
       }
-
     }
   }
 }
@@ -244,7 +245,9 @@ img {
   scroll-margin-top: 5rem;
 
   .section-title {
-    font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -289,14 +292,14 @@ img {
     width: 120px;
     top: -10px;
     left: -12px;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     z-index: 99;
     display: flex;
     align-items: center;
     justify-content: center;
 
     p {
-      font-size: .8rem;
+      font-size: 0.8rem;
       font-weight: bold;
     }
   }
@@ -455,17 +458,16 @@ img {
   }
 }
 
-
 // ABOUT ME
 .about-me-container {
   display: grid;
   grid-template-columns: 1fr 300px;
   grid-template-rows: auto auto;
   gap: 1rem;
-  
+
   .about-me-container-section {
     background: radial-gradient(ellipse at top, #471b4d 10%, transparent),
-    radial-gradient(ellipse at bottom, #ec5cff40, transparent);
+      radial-gradient(ellipse at bottom, #ec5cff40, transparent);
     border: 2px solid $border-card;
     border-radius: 1rem;
     grid-column: 1 / 2;
@@ -492,20 +494,18 @@ img {
     div {
       display: flex;
       align-items: center;
-      gap: .8rem;
-  
+      gap: 0.8rem;
+
       & img {
         width: 35px;
-        filter: drop-shadow(
-          5px 1px 3px rgba(0, 0, 0, .8)
-        );
+        filter: drop-shadow(5px 1px 3px rgba(0, 0, 0, 0.8));
       }
     }
   }
 
   .about-me-container-article-first {
     grid-column: 2 / 3;
-    background-color: rgba($color: $border-card, $alpha: .2);
+    background-color: rgba($color: $border-card, $alpha: 0.2);
     border: 2px solid $border-card;
     border-radius: 1rem;
     padding: 1rem 0rem;
@@ -514,7 +514,9 @@ img {
     max-height: 450px;
 
     & > h2 {
-      font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
       text-align: center;
     }
 
@@ -548,13 +550,13 @@ img {
       grid-template-rows: repeat(3, 1fr);
       width: 100%;
       height: 100%;
-      gap: .5rem;
-      padding: .5rem;
+      gap: 0.5rem;
+      padding: 0.5rem;
       align-content: center;
       justify-content: center;
       align-items: center;
       justify-items: center;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
 
       span {
         display: flex;
@@ -596,7 +598,7 @@ img {
 
   .about-me-container-article-second {
     grid-column: 1 / 3;
-    background-color: rgba($color: $border-card, $alpha: .2);
+    background-color: rgba($color: $border-card, $alpha: 0.2);
     border: 2px solid $border-card;
     border-radius: 1rem;
   }
@@ -698,12 +700,13 @@ img {
   align-items: center;
   justify-content: center;
   border-top: 1px solid $second-color;
+  border-bottom: 1px solid $second-color;
   padding: 3rem 0rem;
 
   .footer-info {
-   width: 100%;
-   display: flex;
-   align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
 
     div {
       display: flex;
@@ -736,6 +739,14 @@ img {
     &:hover {
       @include hover-scale();
     }
+  }
+}
+
+.footer-message {
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: $second-color;
   }
 }
 
@@ -1007,7 +1018,7 @@ img {
           height: 100%;
           object-fit: cover;
           object-position: center;
-          border-radius: .5rem;
+          border-radius: 0.5rem;
         }
       }
     }
@@ -1219,7 +1230,7 @@ img {
           width: 60%;
           flex-grow: 0;
           text-wrap: pretty, balance;
-          font-size: .7rem;
+          font-size: 0.7rem;
         }
 
         a {

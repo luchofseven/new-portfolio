@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import Projects from '@/components/Projects'
 import AboutMe from '@/components/AboutMe'
+import FooterMessage from '@/components/FooterMessage'
 
 export default function Home (): JSX.Element {
   return (
@@ -13,6 +14,7 @@ export default function Home (): JSX.Element {
         <Projects />
         <AboutMe />
         <Footer />
+        <FooterMessage />
       </main>
   </>
   )
