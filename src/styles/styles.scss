@@ -288,6 +288,7 @@ img {
 
   &:hover .projects-card-img a img {
     opacity: 0.6;
+    scale: .95;
   }
 
   .last-project {
@@ -363,7 +364,7 @@ img {
         border-radius: 1rem;
         z-index: 5;
         mask-image: linear-gradient(to top, transparent 1%, $black-color 10%);
-        transition: opacity 200ms ease-in-out;
+        transition: opacity 200ms ease-in-out, scale 200ms 200ms ease-in-out;
       }
     }
   }
@@ -555,7 +556,7 @@ img {
         position: relative;
         border-radius: 1rem;
         overflow: hidden;
-        max-width: 100px;
+        width: 80px;
         transition: transform 200ms ease-in-out;
         filter: saturate(80%);
 
@@ -568,7 +569,7 @@ img {
           box-shadow: inset 2px 2px 35px black;
         }
 
-        img {
+        picture, img {
           transform: rotate(0deg);
           width: 100%;
           height: 100%;

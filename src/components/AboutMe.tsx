@@ -3,20 +3,20 @@ import TechStack from './TechStack'
 export default function AboutMe (): JSX.Element {
   return (
     <section id="about-me" className="section-container">
-
       <header className="section-title">
         <h2>SOBRE MÍ</h2>
       </header>
 
       <main className="about-me-container">
-
         <section className="about-me-container-section">
-
           <div>
-            <img
-              src="/vectors/computadora-3d.png"
-              alt="vector computadora 3d"
-            />
+            <picture>
+              <source srcSet="/vectors/computadora-3d.avif" type="image/avif" />
+              <img
+                src="/vectors/computadora-3d.webp"
+                alt="vector computadora 3d"
+              />
+            </picture>
             <p>
               Tengo más de 2 años de experiencia utilizando tecnologías como:{' '}
               <i>HTML, CSS, Sass, JavaScript, React</i>. También hago uso de{' '}
@@ -25,11 +25,14 @@ export default function AboutMe (): JSX.Element {
           </div>
 
           <div>
-            <img
-              src="/vectors/cohete-3d.png"
-              alt="vector cohete 3d"
-              className="vector-rocket"
-            />
+            <picture>
+              <source srcSet="/vectors/cohete-3d.avif" type="image/avif" />
+              <img
+                src="/vectors/cohete-3d.webp"
+                alt="vector cohete 3d"
+                className="vector-rocket"
+              />
+            </picture>
             <p>
               Actualmente estoy realizando aplicaciones <i>full-stack</i>, con
               tecnologías como <i>React, TypeScript, NestJS y MYSQL</i>, con el
@@ -38,7 +41,10 @@ export default function AboutMe (): JSX.Element {
           </div>
 
           <div>
-            <img src="/vectors/objetivo-3d.png" alt="vector objetivo 3d" />
+            <picture>
+              <source srcSet="/vectors/objetivo-3d.avif" type="image/avif" />
+              <img src="/vectors/objetivo-3d.webp" alt="vector objetivo 3d" />
+            </picture>
             <p>
               Estoy dispuesto y me encantaría formar parte de una empresa o
               contribuir a un proyecto en conjunto.
@@ -55,54 +61,83 @@ export default function AboutMe (): JSX.Element {
           </p>
 
           <p>¡Gracias por tu atención!</p>
-
         </section>
 
         <article className="about-me-container-article-first">
-
           <h2>PASATIEMPOS</h2>
 
           <div>
-            <img
-              src="/vectors/palanca-de-mando-3d.png"
-              alt="vector palanca de mando 3d"
-              className="hobbies-image"
-            />
+            <picture>
+              <source
+                srcSet="/vectors/palanca-de-mando-3d.avif"
+                type="image/avif"
+              />
+              <img
+                src="/vectors/palanca-de-mando-3d.webp"
+                alt="vector palanca de mando 3d"
+                className="hobbies-image"
+              />
+            </picture>
             <aside className="hobbies-grid">
               <span>
                 <span className="shadow"></span>
-                <img
-                  src="/hobbies/btf2042.png"
-                  alt="icono de battlefield 2042"
-                />
+                <picture>
+                  <source srcSet="/hobbies/btf2042.avif" type="image/avif" />
+                  <img
+                    src="/hobbies/btf2042.webp"
+                    alt="icono de battlefield 2042"
+                  />
+                </picture>
               </span>
               <span>
                 <span className="shadow"></span>
-                <img src="/hobbies/btf5.jpg" alt="icono de battlefield 5" />
+                <picture>
+                  <source srcSet="/hobbies/btf5.avif" type="image/avif" />
+                  <img src="/hobbies/btf5.webp" alt="icono de battlefield 5" />
+                </picture>
               </span>
               <span>
                 <span className="shadow"></span>
-                <img src="/hobbies/btf1.webp" alt="icono de battlefield 1" />
+                <picture>
+                  <source srcSet="/hobbies/btf1.avif" type="image/avif" />
+                  <img src="/hobbies/btf1.webp" alt="icono de battlefield 1" />
+                </picture>
               </span>
               <span>
                 <span className="shadow"></span>
-                <img src="/hobbies/btf4.jpg" alt="icono de battlefield 4" />
+                <picture>
+                  <source srcSet="/hobbies/btf4.avif" type="image/avif" />
+                  <img src="/hobbies/btf4.webp" alt="icono de battlefield 4" />
+                </picture>
               </span>
               <span>
                 <span className="shadow"></span>
-                <img src="/hobbies/cs2.png" alt="icono de counter-strike 2" />
+                <picture>
+                  <source srcSet="/hobbies/cs2.avif" type="image/avif" />
+                  <img
+                    src="/hobbies/cs2.webp"
+                    alt="icono de counter-strike 2"
+                  />
+                </picture>
+              </span>
+              <span>
+                <span className="shadow"></span>
+                <picture>
+                  <source srcSet="/hobbies/lol.avif" type="image/avif" />
+                  <img
+                    src="/hobbies/lol.webp"
+                    alt="icono de league of legends"
+                  />
+                </picture>
               </span>
             </aside>
           </div>
-
         </article>
 
         <article className="about-me-container-article-second">
           <TechStack />
         </article>
-
       </main>
-
     </section>
   )
 }
