@@ -14,8 +14,8 @@ export default function Projects (): JSX.Element {
           lastProject={true}
         >
           <p>
-            Aplicación web para la administración de bares y/o restaurantes.
-            Actualmente utilizada por bares locales. Construído con React,
+            Aplicación web para la administración de bares y/o restaurantes.{' '}
+            <span className='highlighted'>Actualmente utilizada por bares locales</span>. Construído con React,
             TypeScript, Redux, Tailwind, NestJS, TypeORM, MySQL, etc.
           </p>
         </Card>
@@ -26,7 +26,7 @@ export default function Projects (): JSX.Element {
           urlRepo="https://github.com/luchofseven/tesla-clone"
         >
           <p>
-            Clonación del sitio web de Tesla. En base a un stream de @midudev.
+            Clonación del sitio web de Tesla. En base a un stream de <a href="https://www.twitch.tv/midudev" target='_blank' rel='noreferrer' className='highlighted'>@midudev</a>.
             Construído con Astro y Tailwind.
           </p>
         </Card>

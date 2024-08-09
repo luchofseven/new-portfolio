@@ -417,6 +417,13 @@ img {
       margin-top: 0.2rem;
     }
 
+    .highlighted {
+      color: $second-color;
+      font-style: italic;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
     footer {
       margin-top: 0rem;
       width: 100%;

@@ -371,6 +371,13 @@ img {
   margin-top: 0.2rem;
 }
 
+.projects-card .projects-card-info .highlighted {
+  color: #ec5cff;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .projects-card .projects-card-info footer {
   margin-top: 0rem;
   width: 100%;
