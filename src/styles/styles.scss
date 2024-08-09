@@ -512,7 +512,7 @@ img {
     padding: 1rem 0rem;
     position: relative;
     overflow: hidden;
-    max-height: 450px;
+    max-height: auto;
 
     & > h2 {
       font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont,
@@ -1266,8 +1266,7 @@ img {
       width: 100%;
       text-wrap: pretty;
 
-      &:nth-child(4),
-      &:nth-child(5) {
+      &:nth-child(4), &:nth-child(6) {
         text-wrap: balance;
         text-align: center;
       }
