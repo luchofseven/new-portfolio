@@ -1125,8 +1125,9 @@ img {
     width: 100%;
     text-wrap: pretty;
   }
-  .about-me-container p:nth-child(4), .about-me-container p:nth-child(6) {
-    text-wrap: balance;
+  .about-me-container .contact,
+  .about-me-container .thanks {
+    text-wrap: pretty;
     text-align: center;
   }
   .tech-stack-container {

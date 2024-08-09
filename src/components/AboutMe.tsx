@@ -50,7 +50,7 @@ export default function AboutMe (): JSX.Element {
             </p>
           </div>
 
-          <p>
+          <p className='contact'>
             Cualquiera sean tus dudas podés contactarme a través de mis medios
             de
             <span>
@@ -59,7 +59,7 @@ export default function AboutMe (): JSX.Element {
             .
           </p>
 
-          <p>¡Gracias por tu atención!</p>
+          <p className='thanks'>¡Gracias por tu atención!</p>
         </section>
 
         <article className="about-me-container-article-first">

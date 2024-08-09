@@ -1265,11 +1265,12 @@ img {
       line-height: 24px;
       width: 100%;
       text-wrap: pretty;
+    }
 
-      &:nth-child(4), &:nth-child(6) {
-        text-wrap: balance;
-        text-align: center;
-      }
+    .contact,
+    .thanks {
+      text-wrap: pretty;
+      text-align: center;
     }
   }
 
