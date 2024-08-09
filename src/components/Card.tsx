@@ -1,24 +1,25 @@
 'use client'
 
 import { GithubIcon, VisitWebsiteIcon } from '@/icons/Icons'
-import { useState } from 'react'
+import { type ReactNode, useState } from 'react'
 
 interface CardInfo {
   img: string
   title: string
-  description: string
+  description?: string
   urlDeploy: string
   urlRepo?: string
   lastProject?: boolean
+  children: ReactNode
 }
 
 export default function Card ({
   img,
   title,
-  description,
   urlDeploy,
   urlRepo,
-  lastProject = false
+  lastProject = false,
+  children
 }: CardInfo): JSX.Element {
   const [cardInfo, setCardInfo] = useState(false)
 
@@ -48,9 +49,9 @@ export default function Card ({
         </a>
       </div>
       <div className={`projects-card-info ${cardInfo ? 'is-active' : ''}`}>
-        <div className='projects-card-info-container'>
+        <div className="projects-card-info-container">
           <h3>{title}</h3>
-          <p>{description}</p>
+          <span>{children}</span>
           <footer>
             <a href={urlDeploy} rel="noreferrer" target="_blank">
               <VisitWebsiteIcon />

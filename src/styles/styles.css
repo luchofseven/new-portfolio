@@ -68,6 +68,7 @@ img {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 0rem 1rem;
 }
 
 .navbar-header .navbar-aside {
@@ -162,9 +163,10 @@ img {
 .hero-container .hero-container-top .hero-container-top-left p {
   line-height: 24px;
   margin: 0;
-  width: 100%;
+  width: 80%;
   flex-grow: 0;
   text-wrap: balance;
+  font-size: 0.9rem;
 }
 
 .hero-container .hero-container-top .hero-container-top-left a {
@@ -182,7 +184,7 @@ img {
   font-size: 0.9rem;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
 }
 
 .hero-container .hero-container-top .hero-container-top-left a:hover {
@@ -245,7 +247,6 @@ img {
 
 .projects-card:hover .projects-card-img a img {
   opacity: 0.6;
-  scale: .95;
 }
 
 .projects-card .last-project {
@@ -367,6 +368,7 @@ img {
   overflow-y: scroll;
   scrollbar-width: none;
   font-size: 0.9rem;
+  margin-top: 0.2rem;
 }
 
 .projects-card .projects-card-info footer {
@@ -417,6 +419,12 @@ img {
   padding: 1rem 2rem;
 }
 
+.about-me-container .about-me-container-section > h2 {
+  font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  padding: 1rem 0;
+}
+
 .about-me-container .about-me-container-section img {
   animation: aboutme-movement 2s ease-in-out infinite alternate both;
 }
@@ -458,6 +466,7 @@ img {
 .about-me-container .about-me-container-article-first > h2 {
   font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
+  padding: 1rem 0;
 }
 
 .about-me-container .about-me-container-article-first .hobbies-image {
@@ -520,7 +529,8 @@ img {
   box-shadow: inset 2px 2px 35px black;
 }
 
-.about-me-container .about-me-container-article-first .hobbies-grid span picture, .about-me-container .about-me-container-article-first .hobbies-grid span img {
+.about-me-container .about-me-container-article-first .hobbies-grid span picture,
+.about-me-container .about-me-container-article-first .hobbies-grid span img {
   transform: rotate(0deg);
   width: 100%;
   height: 100%;
@@ -560,7 +570,6 @@ img {
   flex-direction: column;
   align-items: center;
   border-radius: 0rem 0rem 0.5rem 0.5rem;
-  padding: 1rem;
 }
 
 .tech-stack-container .tech-stack {
@@ -807,9 +816,7 @@ img {
     padding: 1rem 0;
   }
   .hero-container .hero-container-top .hero-container-top-left h1 {
-    font-family: var(--font-dmSerifDisplay), sans-serif;
     font-size: 2.3rem;
-    letter-spacing: 1px;
     text-align: center;
   }
   .hero-container .hero-container-top .hero-container-top-left h1 span {
@@ -918,7 +925,7 @@ img {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    padding: 0.5rem;
+    padding: 0.8rem;
     text-wrap: pretty, balance;
     background-color: #0e0012;
     backdrop-filter: blur(0);
@@ -931,6 +938,9 @@ img {
     opacity: 1;
     visibility: visible;
     transition: none;
+  }
+  .projects-card .projects-card-info .projects-card-info-container {
+    opacity: 1;
   }
   .projects-card .projects-card-info h3 {
     color: #ec5cff;
@@ -973,48 +983,205 @@ img {
   .projects-card .projects-card-info footer a svg {
     width: 20px;
   }
+  .about-me-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+  }
+  .about-me-container .about-me-container-section {
+    background: radial-gradient(ellipse at top, #471b4d 10%, transparent), radial-gradient(ellipse at bottom, #ec5cff40, transparent);
+    border-radius: 1rem;
+    grid-column: 1 / 1;
+    padding: 0.5rem 1rem;
+  }
+  .about-me-container .about-me-container-section > h2 {
+    font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .about-me-container .about-me-container-section img {
+    animation: aboutme-movement 2s ease-in-out infinite alternate both;
+  }
+  .about-me-container .about-me-container-section .vector-rocket {
+    rotate: 15deg;
+  }
+  @keyframes aboutme-movement {
+    0% {
+      transform: translateY(20%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  .about-me-container .about-me-container-section div {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .about-me-container .about-me-container-section div img {
+    width: 30px;
+    filter: drop-shadow(5px 1px 3px rgba(0, 0, 0, 0.8));
+  }
+  .about-me-container .about-me-container-article-first {
+    grid-column: auto;
+    background-color: rgba(71, 27, 77, 0.2);
+    border-radius: 1rem;
+    padding: 1rem 0rem;
+    position: relative;
+    overflow: hidden;
+    max-height: 450px;
+  }
+  .about-me-container .about-me-container-article-first > h2 {
+    font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .about-me-container .about-me-container-article-first .hobbies-image {
+    position: absolute;
+    z-index: -1;
+    top: -3rem;
+    left: 1rem;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 110%;
+    opacity: 20%;
+    rotate: 20deg;
+    animation: hobbies-movement 2s ease-in-out infinite alternate both;
+  }
+  @keyframes hobbies-movement {
+    0% {
+      transform: translateY(3%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    padding: 0.5rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 0.5rem;
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 60px;
+    transition: transform 200ms ease-in-out;
+    filter: saturate(100%);
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid span .shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    box-shadow: inset 2px 2px 35px black;
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid span picture,
+  .about-me-container .about-me-container-article-first .hobbies-grid span img {
+    transform: rotate(0deg);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid span:hover {
+    transform: scale(1);
+    filter: saturate(100%);
+  }
+  .about-me-container .about-me-container-article-second {
+    grid-column: auto;
+    background-color: rgba(71, 27, 77, 0.2);
+    border-radius: 1rem;
+  }
+  .about-me-container p {
+    text-wrap: pretty;
+  }
+  .about-me-container p span > a {
+    color: #ec5cff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .about-me-container p {
+    margin: 0.3rem auto;
+    padding: 0.8rem 0.5rem;
+    line-height: 24px;
+    width: 100%;
+    text-wrap: pretty;
+  }
+  .about-me-container p:nth-child(4), .about-me-container p:nth-child(5) {
+    text-wrap: balance;
+    text-align: center;
+  }
+  .tech-stack-container {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .tech-stack-container article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    padding: 1rem;
+  }
   .tech-stack-container .tech-stack {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
   }
-  .tech-stack-container .tech-stack svg:hover {
-    transform: none;
+  .tech-stack-container svg {
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    transition: color, transform 200ms ease-in-out, background-color 200ms ease-in-out;
+    filter: grayscale(0);
   }
-  .about-me-container p {
-    margin: 0.5rem auto;
-    padding: 0.8rem 1rem;
-    line-height: 24px;
-    width: 100%;
+  .tech-stack-container svg:hover {
+    transform: scale(1);
+    filter: grayscale(0);
   }
   .footer-container {
-    background: linear-gradient(to bottom, #0e0012 -10%, #471b4d);
-    border-radius: 0.5rem;
     width: 100%;
-    height: auto;
+    min-height: 350px;
     display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
-    margin-top: 0rem;
-    padding: 2rem 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ec5cff;
+    border-bottom: 1px solid #ec5cff;
+    margin: 0;
+    padding: 0;
   }
   .footer-container .footer-info {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 2rem;
   }
   .footer-container .footer-info div {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    gap: 2rem;
   }
   .footer-container .footer-info div a {
     display: flex;
@@ -1023,25 +1190,27 @@ img {
     color: #ffffff;
     text-decoration: none;
     gap: 0.5rem;
-    transition: none;
+    transition: transform 200ms ease-in-out, color 200ms ease-in-out;
+    font-family: HKGroteskWide;
+    font-size: 2rem;
+    font-style: italic;
   }
   .footer-container .footer-info div a:hover {
-    color: #ffffff;
-    transform: scale(1);
+    color: #ec5cff;
+    transform: scale(1.1);
   }
   .footer-container .footer-logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50px;
+    transition: transform 200ms ease-in-out;
+    margin-bottom: 2rem;
   }
-  .footer-container .footer-logo img {
-    width: 80px;
-    height: auto;
-    transition: none;
+  .footer-container .footer-logo:hover {
+    transform: scale(1.1);
   }
-  .footer-container .footer-logo img:hover {
-    transform: scale(1);
+  .footer-message p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #ec5cff;
   }
 }
 
@@ -1059,7 +1228,7 @@ img {
     height: 500px;
   }
   .hero-container .hero-container-top .hero-container-top-left {
-    width: 50%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1068,42 +1237,35 @@ img {
     gap: 1rem;
   }
   .hero-container .hero-container-top .hero-container-top-left h1 {
-    font-family: var(--font-dmSerifDisplay), sans-serif;
-    font-size: 2rem;
-    letter-spacing: 1px;
+    font-size: 2.5rem;
   }
   .hero-container .hero-container-top .hero-container-top-left h1 span {
-    font-family: var(--font-dmSerifDisplay), sans-serif;
     color: #ec5cff;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     display: block;
-    letter-spacing: 1.5px;
   }
   .hero-container .hero-container-top .hero-container-top-left p {
     line-height: 15px;
     margin: 0;
-    width: 60%;
+    width: 80%;
     flex-grow: 0;
     text-wrap: pretty, balance;
-    font-size: 0.7rem;
   }
   .hero-container .hero-container-top .hero-container-top-left a {
     margin-top: 1rem;
     background-color: #220d24;
     color: #ffffff;
     text-align: center;
-    min-width: 30%;
-    max-width: 30%;
+    min-width: 35%;
+    max-width: 35%;
     border: 2px solid rgba(71, 27, 77, 0.8);
     border-radius: 5rem;
     padding: 0.7rem 0;
     font-family: var(--font-arimo);
     font-weight: normal;
-    font-size: 0.7rem;
     cursor: pointer;
     text-decoration: none;
     transition: background-color 300ms ease;
-    min-width: 40%;
   }
   .hero-container .hero-container-top .hero-container-top-left a:hover {
     background-color: #ec5cff;
@@ -1130,10 +1292,13 @@ img {
     transform: scale(1.05);
   }
   .projects-projects {
+    width: 100%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     gap: 1rem;
+    padding: 0rem;
   }
   .projects-card {
     width: 45%;
@@ -1145,31 +1310,15 @@ img {
     transition: transform 200ms ease-out;
     background-color: #0e0012;
     border-radius: 0.5rem;
+    text-decoration: none;
+    border: 2px solid rgba(71, 27, 77, 0.8);
   }
   .projects-card:hover {
-    transform: none;
+    transform: scale(1);
     z-index: 50;
-  }
-  .projects-card:first-child {
-    grid-column: auto;
-    grid-row: auto;
-  }
-  .projects-card:nth-child(4) {
-    grid-column: auto;
-    grid-row: auto;
-  }
-  .projects-card:nth-last-child(7) {
-    grid-column: auto;
-    grid-row: auto;
-  }
-  .projects-card:last-child {
-    grid-column: auto;
-    grid-row: auto;
   }
   .projects-card .projects-card-img {
     width: 100%;
-    min-height: 200px;
-    max-height: 100%;
     position: relative;
   }
   .projects-card .projects-card-img a {
@@ -1180,7 +1329,6 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 0rem;
     border-radius: 0.5rem;
   }
   .projects-card .projects-card-info {
@@ -1188,16 +1336,291 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    justify-content: flex-end;
+    padding: 0.8rem;
     text-wrap: pretty, balance;
+    background-color: #0e0012;
+    backdrop-filter: blur(0);
     position: relative;
     width: 100%;
     left: 0px;
     right: 0px;
-    top: -5px;
+    top: 0px;
     bottom: 0px;
     opacity: 1;
     visibility: visible;
     transition: none;
+  }
+  .projects-card .projects-card-info .projects-card-info-container {
+    opacity: 1;
+  }
+  .projects-card .projects-card-info h3 {
+    color: #ec5cff;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+  }
+  .projects-card .projects-card-info p {
+    width: 100%;
+    line-height: 24px;
+    padding-right: 1rem;
+    flex-grow: 1;
+    text-wrap: pretty, balance;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    font-size: 0.9rem;
+  }
+  .projects-card .projects-card-info footer {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+  .projects-card .projects-card-info footer a {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 4px;
+    padding: 0 1rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 300ms ease-in-out;
+    text-wrap: pretty, balance;
+    letter-spacing: 0.5px;
+    font-size: 0.7rem;
+  }
+  .projects-card .projects-card-info footer a:hover {
+    background-color: #220d24;
+  }
+  .projects-card .projects-card-info footer a svg {
+    width: 20px;
+  }
+  .about-me-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+  }
+  .about-me-container .about-me-container-section {
+    background: radial-gradient(ellipse at top, #471b4d 10%, transparent), radial-gradient(ellipse at bottom, #ec5cff40, transparent);
+    border-radius: 1rem;
+    grid-column: 1 / 1;
+    padding: 0.5rem 1.5rem;
+  }
+  .about-me-container .about-me-container-section img {
+    animation: aboutme-movement 2s ease-in-out infinite alternate both;
+  }
+  .about-me-container .about-me-container-section .vector-rocket {
+    rotate: 15deg;
+  }
+  @keyframes aboutme-movement {
+    0% {
+      transform: translateY(20%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  .about-me-container .about-me-container-section div {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .about-me-container .about-me-container-section div p {
+    text-wrap: pretty;
+  }
+  .about-me-container .about-me-container-section div img {
+    width: 30px;
+    filter: drop-shadow(5px 1px 3px rgba(0, 0, 0, 0.8));
+  }
+  .about-me-container .about-me-container-article-first {
+    grid-column: auto;
+    background-color: rgba(71, 27, 77, 0.2);
+    border-radius: 1rem;
+    padding: 1rem 0rem;
+    position: relative;
+    overflow: hidden;
+    max-height: 450px;
+  }
+  .about-me-container .about-me-container-article-first > h2 {
+    font-family: HKGroteskWide, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .about-me-container .about-me-container-article-first .hobbies-image {
+    position: absolute;
+    z-index: -1;
+    top: -6rem;
+    left: 0rem;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 60%;
+    margin: 0 auto;
+    opacity: 20%;
+    rotate: 20deg;
+    animation: hobbies-movement 2s ease-in-out infinite alternate both;
+  }
+  @keyframes hobbies-movement {
+    0% {
+      transform: translateY(3%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    padding: 0.5rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 0.5rem;
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 60px;
+    transition: transform 200ms ease-in-out;
+    filter: saturate(100%);
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid span .shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    box-shadow: inset 2px 2px 35px black;
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid span picture,
+  .about-me-container .about-me-container-article-first .hobbies-grid span img {
+    transform: rotate(0deg);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+  }
+  .about-me-container .about-me-container-article-first .hobbies-grid span:hover {
+    transform: scale(1);
+    filter: saturate(100%);
+  }
+  .about-me-container .about-me-container-article-second {
+    grid-column: auto;
+    background-color: rgba(71, 27, 77, 0.2);
+    border-radius: 1rem;
+  }
+  .about-me-container p {
+    text-wrap: pretty;
+  }
+  .about-me-container p span > a {
+    color: #ec5cff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .about-me-container p {
+    margin: 0.3rem auto;
+    padding: 0.8rem 0.5rem;
+    line-height: 24px;
+    width: 100%;
+    text-wrap: balance;
+  }
+  .about-me-container p:nth-child(4), .about-me-container p:nth-child(5) {
+    text-wrap: balance;
+    text-align: center;
+  }
+  .tech-stack-container {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .tech-stack-container article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    padding: 1rem;
+  }
+  .tech-stack-container .tech-stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+  }
+  .tech-stack-container svg {
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    transition: color, transform 200ms ease-in-out, background-color 200ms ease-in-out;
+    filter: grayscale(0);
+  }
+  .tech-stack-container svg:hover {
+    transform: scale(1);
+    filter: grayscale(0);
+  }
+  .footer-container {
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ec5cff;
+    border-bottom: 1px solid #ec5cff;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-container .footer-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .footer-container .footer-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer-container .footer-info div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    gap: 0.5rem;
+    transition: transform 200ms ease-in-out, color 200ms ease-in-out;
+    font-family: HKGroteskWide;
+    font-size: 2rem;
+    font-style: italic;
+  }
+  .footer-container .footer-info div a:hover {
+    color: #ec5cff;
+    transform: scale(1.1);
+  }
+  .footer-container .footer-logo {
+    width: 50px;
+    transition: transform 200ms ease-in-out;
+    margin-bottom: 2rem;
+  }
+  .footer-container .footer-logo:hover {
+    transform: scale(1.1);
+  }
+  .footer-message p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #ec5cff;
   }
 }

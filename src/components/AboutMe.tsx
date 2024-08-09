@@ -3,12 +3,11 @@ import TechStack from './TechStack'
 export default function AboutMe (): JSX.Element {
   return (
     <section id="about-me" className="section-container">
-      <header className="section-title">
-        <h2>SOBRE MÍ</h2>
-      </header>
+      <header className="section-title"> </header>
 
       <main className="about-me-container">
         <section className="about-me-container-section">
+          <h2>SOBRE MÍ</h2>
           <div>
             <picture>
               <source srcSet="/vectors/computadora-3d.avif" type="image/avif" />
