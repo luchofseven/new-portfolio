@@ -11,6 +11,7 @@ interface CardInfo {
   urlRepo?: string
   lastProject?: boolean
   children: ReactNode
+  techProjectStack: JSX.Element
 }
 
 export default function Card ({
@@ -19,6 +20,7 @@ export default function Card ({
   urlDeploy,
   urlRepo,
   lastProject = false,
+  techProjectStack,
   children
 }: CardInfo): JSX.Element {
   const [cardInfo, setCardInfo] = useState(false)
@@ -52,17 +54,16 @@ export default function Card ({
         <div className="projects-card-info-container">
           <h3>{title}</h3>
           <span>{children}</span>
+          <span className="project-techs-container">{techProjectStack}</span>
           <footer>
-            <a href={urlDeploy} rel="noreferrer" target="_blank">
-              <VisitWebsiteIcon />
-              Visitar
-            </a>
             {urlRepo !== undefined && (
               <a href={urlRepo} rel="noreferrer" target="_blank">
                 <GithubIcon />
-                GitHub
               </a>
             )}
+            <a href={urlDeploy} rel="noreferrer" target="_blank">
+              <VisitWebsiteIcon />
+            </a>
           </footer>
         </div>
       </div>
