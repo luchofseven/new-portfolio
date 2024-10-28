@@ -4,7 +4,7 @@ export default function Hero (): JSX.Element {
       <div className="hero-container-top">
         <article className="hero-container-top-left">
           <h1>
-            Luciano Fernández<span>Desarrollador Frontend</span>
+            Luciano Fernández<span>Desarrollador Full Stack</span>
           </h1>
           <p>
             ¡Me gusta destacar en los detalles! Y doy lo mejor de mí para que tu

@@ -17,7 +17,7 @@ export default function AboutMe (): JSX.Element {
               />
             </picture>
             <p>
-              Tengo más de 2 años de experiencia utilizando tecnologías como:{' '}
+              Tengo más de 3 años de experiencia utilizando tecnologías como:{' '}
               <i>HTML, CSS, Sass, JavaScript, React</i>. También hago uso de{' '}
               <i>Next.Js, Tailwind, TypeScript, Node, NestJS</i>, entre otros.
             </p>
@@ -33,9 +33,7 @@ export default function AboutMe (): JSX.Element {
               />
             </picture>
             <p>
-              Actualmente estoy realizando aplicaciones <i>full-stack</i>, con
-              tecnologías como <i>React, TypeScript, NestJS y MYSQL</i>, con el
-              fin de abarcar por completo el ecosistema de desarrollo web.
+              Actualmente realizando aplicaciones <i>full stack</i>, con <i>React, TypeScript, NestJS y MYSQL</i>.
             </p>
           </div>
 
