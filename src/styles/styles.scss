@@ -178,12 +178,14 @@ img {
         font-family: HKGroteskWide, (--font-dmSerifDisplay), sans-serif;
         font-size: 3rem;
         text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
 
         span {
           font-family: HKGroteskWide, var(--font-dmSerifDisplay), sans-serif;
           color: $second-color;
           font-size: 1.5rem;
-          display: block;
+          display: inline-block;
         }
       }
 
@@ -1447,7 +1449,7 @@ img {
           span {
             color: $second-color;
             font-size: 1.6rem;
-            display: block;
+            display: inline-block;
           }
         }
 

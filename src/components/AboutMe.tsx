@@ -17,7 +17,7 @@ export default function AboutMe (): JSX.Element {
               />
             </picture>
             <p>
-              Tengo más de 3 años de experiencia utilizando tecnologías como:{' '}
+              Más de 3 años de experiencia en desarrollo de aplicaciones web. Especializado en <i>front end</i>, utilizando tecnologías como:{' '}
               <i>HTML, CSS, Sass, JavaScript, React</i>. También hago uso de{' '}
               <i>Next.Js, Tailwind, TypeScript, Node, NestJS</i>, entre otros.
             </p>

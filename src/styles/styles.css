@@ -151,13 +151,15 @@ img {
   font-family: HKGroteskWide, --font-dmSerifDisplay, sans-serif;
   font-size: 3rem;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-container .hero-container-top .hero-container-top-left h1 span {
   font-family: HKGroteskWide, var(--font-dmSerifDisplay), sans-serif;
   color: #ec5cff;
   font-size: 1.5rem;
-  display: block;
+  display: inline-block;
 }
 
 .hero-container .hero-container-top .hero-container-top-left p {
@@ -1285,7 +1287,7 @@ img {
   .hero-container .hero-container-top .hero-container-top-left h1 span {
     color: #ec5cff;
     font-size: 1.6rem;
-    display: block;
+    display: inline-block;
   }
   .hero-container .hero-container-top .hero-container-top-left p {
     line-height: 15px;
