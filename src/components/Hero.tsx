@@ -10,7 +10,7 @@ export default function Hero (): JSX.Element {
             ¡Me gusta destacar en los detalles! Y doy lo mejor de mí para que tu
             web sea la más bonita. 💖
           </p>
-          <a href="/lf-cv.pdf" download>
+          <a href="/cv-luciano-fernandez.pdf" download>
             Descargar CV
           </a>
         </article>

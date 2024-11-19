@@ -1,6 +1,6 @@
 import {
   AstroIcon,
-  JavaScriptIcon,
+  // JavaScriptIcon,
   MySqlIcon,
   NextJsIcon,
   NodeJsIcon,
@@ -76,6 +76,58 @@ export default function Projects (): JSX.Element {
             <span className="highlighted">
               Actualmente utilizada por bares locales
             </span>
+            .
+          </p>
+        </Card>
+        <Card
+          img="/project-infojobs-landing.webp"
+          title="InfoJobs"
+          urlDeploy="https://primer-trabajo.infojobs.net/"
+          techProjectStack={
+            <>
+              <ProjectTech
+                name="Astro"
+                backgroundColor="#ff590415"
+                border="1px solid #ff5904"
+                textColor="#ff5904"
+                icon={<AstroIcon />}
+              />
+              <ProjectTech
+                name="Tailwind"
+                backgroundColor="#38bdf815"
+                border="1px solid #38bdf8"
+                textColor="#38bdf8"
+                icon={<TailwindIcon />}
+              />
+              <ProjectTech
+                name="TypeScript"
+                backgroundColor="#2d79c715"
+                border="1px solid #2d79c7"
+                textColor="#2d79c7"
+                icon={<TypeScriptIcon />}
+              />
+            </>
+          }
+        >
+          <p>
+            Landing page de{' '}
+            <a
+              href="https://www.infojobs.net/"
+              target="_blank"
+              rel="noreferrer"
+              className="highlighted"
+            >
+              InfoJobs
+            </a>{' '}
+            desarrollada en un equipo de 4 personas, liderado por{' '}
+            <a
+              href="https://www.twitch.tv/midudev"
+              target="_blank"
+              rel="noreferrer"
+              className="highlighted"
+            >
+              @midudev
+            </a>
             .
           </p>
         </Card>
@@ -167,7 +219,7 @@ export default function Projects (): JSX.Element {
             ejecute de forma automática luego de transcurrido algunos segundos.
           </p>
         </Card>
-        <Card
+        {/* <Card
           img="/project-mohana.webp"
           title="Mohana Indumentaria"
           urlDeploy="https://luchofseven.github.io/mohana-indumentaria/"
@@ -195,7 +247,7 @@ export default function Projects (): JSX.Element {
             Catálogo de Mohana Indumentaria. Utilizando Firestore para alojar
             los productos. Sitio construído con JavaScript y Firebase.
           </p>
-        </Card>
+        </Card> */}
       </main>
     </section>
   )
