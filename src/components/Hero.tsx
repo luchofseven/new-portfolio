@@ -1,10 +1,13 @@
-export default function Hero (): JSX.Element {
+export default function Hero(): JSX.Element {
   return (
     <section className="hero-container">
       <div className="hero-container-top">
         <article className="hero-container-top-left">
           <h1>
-            Luciano Fernández<span>Desarrollador <span>Full Stack</span></span>
+            Luciano Fernández
+            <span>
+              Desarrollador <span>Full Stack</span>
+            </span>
           </h1>
           <p>
             ¡Me gusta destacar en los detalles! Y doy lo mejor de mí para que tu
@@ -19,5 +22,5 @@ export default function Hero (): JSX.Element {
         </article>
       </div>
     </section>
-  )
+  );
 }

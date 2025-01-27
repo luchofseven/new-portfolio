@@ -1,4 +1,15 @@
-import { CSSIcon, HTMLIcon, JavaScriptIcon, MysqlIcon, NextJsIcon, NodeIcon, ReactIcon, SassIcon, TailwindIcon, TypeScriptIcon } from '@/icons/Icons';
+import {
+  CSSIcon,
+  HTMLIcon,
+  JavaScriptIcon,
+  MysqlIcon,
+  NextJsIcon,
+  NodeIcon,
+  ReactIcon,
+  SassIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+} from '@/icons/Icons';
 
 export default function TechStack() {
   return (

@@ -1,13 +1,11 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-export default function Footer (): JSX.Element {
+export default function Footer(): JSX.Element {
   return (
     <footer id="contact" className="footer-container">
       <div className="footer-info">
         <div>
-          <a href="mailto:luchofseven@gmail.com">
-            EMAIL
-          </a>
+          <a href="mailto:luchofseven@gmail.com">EMAIL</a>
           <a
             href="https://github.com/luchofseven"
             rel="noreferrer"
@@ -35,5 +33,5 @@ export default function Footer (): JSX.Element {
         </a>
       </div>
     </footer>
-  )
+  );
 }

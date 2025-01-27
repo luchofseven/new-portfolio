@@ -1,17 +1,17 @@
 interface IProjectTech {
-  name: string
-  backgroundColor: string
-  textColor: string
-  border: string
-  icon: JSX.Element
+  name: string;
+  backgroundColor: string;
+  textColor: string;
+  border: string;
+  icon: JSX.Element;
 }
 
-export default function ProjectTech ({
+export default function ProjectTech({
   name,
   backgroundColor,
   textColor,
   icon,
-  border
+  border,
 }: IProjectTech) {
   return (
     <span
@@ -21,5 +21,5 @@ export default function ProjectTech ({
       {icon}
       <p>{name}</p>
     </span>
-  )
+  );
 }

@@ -1,38 +1,38 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { MenuOpenIcon, MenuCloseIcon } from '../icons/Icons'
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { MenuOpenIcon, MenuCloseIcon } from '../icons/Icons';
 
-export default function Navbar (): JSX.Element {
-  const [menu, setMenu] = useState(false)
+export default function Navbar(): JSX.Element {
+  const [menu, setMenu] = useState(false);
 
   const handleClick = (): void => {
-    setMenu(!menu)
-  }
+    setMenu(!menu);
+  };
 
   const handleClickMenu = (e: MouseEvent): void => {
-    const target = e.target as HTMLElement
+    const target = e.target as HTMLElement;
     if (
       target?.matches('.navbar-nav') ||
       target?.matches('.navbar-nav *') ||
       target?.matches('.navbar-aside *')
     ) {
-      setMenu(false)
+      setMenu(false);
     }
-  }
+  };
 
   useEffect(() => {
-    document.addEventListener('click', handleClickMenu)
+    document.addEventListener('click', handleClickMenu);
 
     return () => {
-      document.removeEventListener('click', handleClickMenu)
-    }
-  }, [])
+      document.removeEventListener('click', handleClickMenu);
+    };
+  }, []);
 
   return (
     <header className="navbar-header">
-      <div className='navbar-header-container'>
+      <div className="navbar-header-container">
         <aside className="navbar-aside">
           <a href="#">
             <Image
@@ -43,7 +43,9 @@ export default function Navbar (): JSX.Element {
             />
           </a>
         </aside>
-        <button onClick={handleClick}>{menu ? <MenuOpenIcon /> : <MenuCloseIcon /> }</button>
+        <button onClick={handleClick}>
+          {menu ? <MenuOpenIcon /> : <MenuCloseIcon />}
+        </button>
         <nav className={`navbar-nav ${menu ? 'is-active' : ''}`}>
           <ul>
             <a href="#projects">PROYECTOS</a>
@@ -54,5 +56,5 @@ export default function Navbar (): JSX.Element {
         </nav>
       </div>
     </header>
-  )
+  );
 }

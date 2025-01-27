@@ -1,37 +1,37 @@
-'use client'
+'use client';
 
-import { GithubIcon, VisitWebsiteIcon } from '@/icons/Icons'
-import { type ReactNode, useState } from 'react'
+import { GithubIcon, VisitWebsiteIcon } from '@/icons/Icons';
+import { type ReactNode, useState } from 'react';
 
 interface CardInfo {
-  img: string
-  title: string
-  description?: string
-  urlDeploy: string
-  urlRepo?: string
-  lastProject?: boolean
-  children: ReactNode
-  techProjectStack: JSX.Element
+  img: string;
+  title: string;
+  description?: string;
+  urlDeploy: string;
+  urlRepo?: string;
+  lastProject?: boolean;
+  children: ReactNode;
+  techProjectStack: JSX.Element;
 }
 
-export default function Card ({
+export default function Card({
   img,
   title,
   urlDeploy,
   urlRepo,
   lastProject = false,
   techProjectStack,
-  children
+  children,
 }: CardInfo): JSX.Element {
-  const [cardInfo, setCardInfo] = useState(false)
+  const [cardInfo, setCardInfo] = useState(false);
 
   const handleOnMouseEnter = () => {
-    setCardInfo(true)
-  }
+    setCardInfo(true);
+  };
 
   const handleOnMouseLeave = () => {
-    setCardInfo(false)
-  }
+    setCardInfo(false);
+  };
 
   return (
     <article
@@ -68,5 +68,5 @@ export default function Card ({
         </div>
       </div>
     </article>
-  )
+  );
 }

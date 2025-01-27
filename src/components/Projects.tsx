@@ -7,12 +7,12 @@ import {
   ReactIcon,
   ReduxIcon,
   TailwindIcon,
-  TypeScriptIcon
-} from '../../public/svgs/Icons'
-import Card from './Card'
-import ProjectTech from './ProjectTech'
+  TypeScriptIcon,
+} from '../../public/svgs/Icons';
+import Card from './Card';
+import ProjectTech from './ProjectTech';
 
-export default function Projects (): JSX.Element {
+export default function Projects(): JSX.Element {
   return (
     <section id="projects" className="section-container">
       <header className="section-title">
@@ -250,5 +250,5 @@ export default function Projects (): JSX.Element {
         </Card> */}
       </main>
     </section>
-  )
+  );
 }
