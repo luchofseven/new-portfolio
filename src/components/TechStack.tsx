@@ -1,17 +1,6 @@
-import {
-  CSSIcon,
-  HTMLIcon,
-  JavaScriptIcon,
-  MysqlIcon,
-  NextJsIcon,
-  NodeIcon,
-  ReactIcon,
-  SassIcon,
-  TailwindIcon,
-  TypeScriptIcon
-} from '@/icons/Icons'
+import { CSSIcon, HTMLIcon, JavaScriptIcon, MysqlIcon, NextJsIcon, NodeIcon, ReactIcon, SassIcon, TailwindIcon, TypeScriptIcon } from '@/icons/Icons';
 
-export default function TechStack () {
+export default function TechStack() {
   return (
     <section id="tech-stack" className="section-container tech-stack-container">
       <article>
@@ -55,11 +44,23 @@ export default function TechStack () {
             <NodeIcon />
           </span>
 
+          <span>
+            <img src="/techs/nestjs.png" alt="nestjs icon" />
+          </span>
+
+          <span>
+            <img src="/techs/typeorm.png" alt="typeorm icon" />
+          </span>
+
           <span className="mysql-icon">
             <MysqlIcon />
+          </span>
+
+          <span>
+            <img src="/techs/postgresql.png" alt="postgresql icon" />
           </span>
         </div>
       </article>
     </section>
-  )
+  );
 }
