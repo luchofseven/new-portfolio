@@ -890,7 +890,6 @@ img {
   }
   .hero-container .hero-container-top .hero-container-top-left h1 span {
     color: #ec5cff;
-    font-size: 1.7rem;
     display: block;
   }
   .hero-container .hero-container-top .hero-container-top-left p {
@@ -1015,7 +1014,6 @@ img {
   .projects-card .projects-card-info h3 {
     color: #ec5cff;
     letter-spacing: 0.5px;
-    font-size: 1.2rem;
   }
   .projects-card .projects-card-info p {
     width: 100%;
@@ -1025,7 +1023,6 @@ img {
     text-wrap: pretty, balance;
     overflow-y: scroll;
     scrollbar-width: none;
-    font-size: 0.9rem;
   }
   .projects-card .projects-card-info footer {
     margin-top: 1rem;
@@ -1151,7 +1148,7 @@ img {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-    width: 60px;
+    width: 50px;
     transition: transform 200ms ease-in-out;
     filter: saturate(100%);
   }
@@ -1216,7 +1213,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.2rem;
     margin: 1rem 0;
     flex-wrap: wrap;
   }
@@ -1262,7 +1259,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 0rem;
   }
   .footer-container .footer-info div {
     display: flex;
@@ -1278,7 +1275,7 @@ img {
     gap: 0.5rem;
     transition: transform 200ms ease-in-out, color 200ms ease-in-out;
     font-family: HKGroteskWide;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-style: italic;
   }
   .footer-container .footer-info div a:hover {
@@ -1288,7 +1285,7 @@ img {
   .footer-container .footer-logo {
     width: 50px;
     transition: transform 200ms ease-in-out;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
   .footer-container .footer-logo:hover {
     transform: scale(1.1);
