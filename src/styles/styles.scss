@@ -193,6 +193,7 @@ img {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      justify-content: center;
       padding: 2rem 0.5rem;
       gap: 1rem;
 
@@ -217,7 +218,7 @@ img {
         width: 80%;
         flex-grow: 0;
         text-wrap: balance;
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
 
       a {
@@ -312,7 +313,19 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .projects-projects:has(.projects-card:hover) .projects-card {
+    transition: all 300ms ease-out;
+    filter: opacity(0.5) blur(1.5px) grayscale(100%);
+
+    &:hover {
+      filter: opacity(1) blur(0px) grayscale(0%);
+      z-index: 50;
+    }
+  }
 }
 
 .projects-card {
@@ -322,11 +335,7 @@ img {
   gap: 1rem;
   border-radius: 1rem;
   position: relative;
-  transition: transform 200ms ease-out;
-
-  &:hover .projects-card-img a img {
-    opacity: 0.6;
-  }
+  transition: all 300ms ease-out;
 
   .last-project {
     position: absolute;
@@ -347,11 +356,6 @@ img {
       font-size: 0.8rem;
       font-weight: bold;
     }
-  }
-
-  &:hover {
-    transform: scale(1.05);
-    z-index: 50;
   }
 
   &:first-child {
@@ -738,17 +742,17 @@ img {
 
   svg {
     color: $white-color;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     transition:
       color,
       transform 200ms ease-in-out,
       background-color 200ms ease-in-out;
-    filter: grayscale(1);
+    filter: opacity(0.7);
 
     &:hover {
-      transform: scale(1.3);
-      filter: grayscale(0);
+      transform: scale(1.2);
+      filter: opacity(1);
     }
   }
 
@@ -797,19 +801,19 @@ img {
 
   img {
     color: $white-color;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
     object-position: center;
     transition:
       color,
       transform 200ms ease-in-out,
       background-color 200ms ease-in-out;
-    filter: grayscale(1);
+    filter: opacity(0.7);
 
     &:hover {
-      transform: scale(1.3);
-      filter: grayscale(0);
+      transform: scale(1.2);
+      filter: opacity(1);
     }
   }
 }
@@ -845,7 +849,7 @@ img {
           transform 200ms ease-in-out,
           color 200ms ease-in-out;
         font-family: HKGroteskWide;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-style: italic;
 
         &:hover {
@@ -857,6 +861,7 @@ img {
   }
 
   .footer-logo {
+    margin-top: 8px;
     width: 80px;
     transition: transform 200ms ease-in-out;
 
@@ -1030,7 +1035,7 @@ img {
         }
 
         p {
-          line-height: 22px;
+          line-height: 24px;
           margin: 0;
           padding: 0 1rem;
           width: 100%;
@@ -1578,7 +1583,7 @@ img {
         }
 
         p {
-          line-height: 15px;
+          line-height: 24px;
           margin: 0;
           width: 80%;
           flex-grow: 0;
