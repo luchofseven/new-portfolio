@@ -17,12 +17,18 @@ export default function AboutMe(): JSX.Element {
               />
             </picture>
             <p>
+              +3 años de experiencia creando aplicaciones web eficientes y
+              escalables. Especializado en <i>React, TypeScript y Tailwind</i>{' '}
+              para <i>frontend</i>, con experiencia en <i>backend</i> usando{' '}
+              <i>NestJS, TypeORM y MySQL/PostgreSQL</i>.
+            </p>
+            {/* <p>
               Más de 3 años de experiencia en desarrollo de aplicaciones web.
               Especializado en <i>front end</i>, utilizando tecnologías como:{' '}
               <i>HTML, CSS, Sass, JavaScript, React</i>. También hago uso de{' '}
               <i>Next.Js, Tailwind, TypeScript, Node, NestJS, TypeORM</i>, entre
               otros.
-            </p>
+            </p> */}
           </div>
 
           <div>
@@ -35,9 +41,13 @@ export default function AboutMe(): JSX.Element {
               />
             </picture>
             <p>
+              Actualmente co-lidero el desarrollo de <b>ECOMENU</b>, un sistema
+              para la gestión de bares y restaurantes.
+            </p>
+            {/* <p>
               Actualmente realizando aplicaciones <i>full stack</i>, con{' '}
               <i>React, TypeScript, NestJS y MYSQL o PostgreSQL</i>.
-            </p>
+            </p> */}
           </div>
 
           <div>

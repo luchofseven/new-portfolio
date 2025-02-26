@@ -218,7 +218,7 @@ img {
         width: 80%;
         flex-grow: 0;
         text-wrap: balance;
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
 
       a {
@@ -544,9 +544,10 @@ img {
   grid-template-columns: 1fr 300px;
   grid-template-rows: auto auto;
   gap: 1.5rem;
+  font-size: 0.9rem;
 
   .about-me-container-section {
-    background: radial-gradient(ellipse at top, #471b4d 10%, transparent),
+    background: radial-gradient(ellipse at top, #471b4d 1%, transparent),
       radial-gradient(ellipse at bottom, #ec5cff40, transparent);
     border-radius: 1rem;
     grid-column: 1 / 2;
@@ -568,6 +569,7 @@ img {
         sans-serif;
       text-align: center;
       padding: 1rem 0;
+      font-size: 1.5rem;
     }
 
     img {
@@ -625,6 +627,7 @@ img {
         sans-serif;
       text-align: center;
       padding: 1rem 0;
+      font-size: 1.5rem;
     }
 
     .hobbies-image {
@@ -673,7 +676,7 @@ img {
         position: relative;
         border-radius: 1rem;
         overflow: hidden;
-        width: 80px;
+        width: 70px;
         transition: transform 200ms ease-in-out;
         filter: saturate(80%);
 
@@ -731,6 +734,10 @@ img {
     flex-direction: column;
     align-items: center;
     border-radius: 0rem 0rem 0.5rem 0.5rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 
   .tech-stack {
@@ -849,7 +856,7 @@ img {
           transform 200ms ease-in-out,
           color 200ms ease-in-out;
         font-family: HKGroteskWide;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         font-style: italic;
 
         &:hover {
