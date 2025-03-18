@@ -306,6 +306,41 @@ img {
   }
 }
 
+// EXPERIENCE
+
+.experience-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  & .experience-article {
+    background: radial-gradient(ellipse at top, #471b4d 1%, transparent),
+      radial-gradient(ellipse at bottom, #ec5cff40, transparent);
+    padding: 1rem;
+    border-radius: 1rem;
+
+    & > h4 {
+      font-size: 1.2rem;
+      color: $second-color;
+    }
+
+    & .experience-work-info {
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+
+      & .experience-workdate {
+        color: #858585;
+      }
+    }
+
+    & .experience-work-info-list {
+      font-size: 0.9rem;
+      text-wrap: pretty, balance;
+    }
+  }
+}
+
 // PROJECTS
 
 .projects-projects {
@@ -743,6 +778,8 @@ img {
   .tech-stack {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
     margin: 1rem 0;
   }
@@ -752,10 +789,10 @@ img {
     width: 40px;
     height: 40px;
     transition:
-      color,
+      filter 200ms ease-in-out,
       transform 200ms ease-in-out,
       background-color 200ms ease-in-out;
-    filter: opacity(0.7);
+    filter: opacity(0.8);
 
     &:hover {
       transform: scale(1.2);
@@ -1108,6 +1145,18 @@ img {
       h2 {
         font-size: 1.1rem;
       }
+    }
+  }
+
+  // EXPERIENCE
+
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & .experience-work-info-list {
+      font-size: 0.7rem;
     }
   }
 
@@ -1546,7 +1595,7 @@ img {
 
   .footer-message {
     p {
-      font-size: 0.5rem;
+      font-size: 0.7rem;
       text-align: center;
       color: $second-color;
     }
@@ -1815,6 +1864,10 @@ img {
           width: 30px;
           filter: drop-shadow(5px 1px 3px rgba(0, 0, 0, 0.8));
         }
+      }
+
+      .thanks {
+        text-align: center;
       }
     }
 

@@ -1,6 +1,6 @@
 interface IProjectTech {
   name: string;
-  backgroundColor: string;
+  backgroundColor?: string;
   textColor: string;
   border: string;
   icon: JSX.Element;
@@ -8,7 +8,7 @@ interface IProjectTech {
 
 export default function ProjectTech({
   name,
-  backgroundColor,
+  backgroundColor = 'transparent',
   textColor,
   icon,
   border,

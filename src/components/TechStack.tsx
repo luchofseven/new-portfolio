@@ -1,13 +1,19 @@
 import {
+  AstroIcon,
   CSSIcon,
+  ExpressIcon,
   HTMLIcon,
   JavaScriptIcon,
   MysqlIcon,
+  NestJsIcon,
   NextJsIcon,
   NodeIcon,
+  PostgreSQLIcon,
   ReactIcon,
+  ReduxIcon,
   SassIcon,
   TailwindIcon,
+  TypeORMIcon,
   TypeScriptIcon,
 } from '@/icons/Icons';
 
@@ -31,12 +37,36 @@ export default function TechStack() {
             <JavaScriptIcon />
           </span>
 
+          <span className="typescript-icon">
+            <TypeScriptIcon />
+          </span>
+
+          <span className="astro-icon">
+            <AstroIcon />
+          </span>
+
           <span className="react-icon">
             <ReactIcon />
           </span>
 
-          <span className="typescript-icon">
-            <TypeScriptIcon />
+          <span className="nextjs-icon">
+            <NextJsIcon />
+          </span>
+
+          <span className="redux-icon">
+            <ReduxIcon />
+          </span>
+
+          <span className="node-icon">
+            <NodeIcon />
+          </span>
+
+          <span className="express-icon">
+            <ExpressIcon />
+          </span>
+
+          <span className="nestjs-icon">
+            <NestJsIcon />
           </span>
 
           <span className="sass-icon">
@@ -47,28 +77,16 @@ export default function TechStack() {
             <TailwindIcon />
           </span>
 
-          <span className="nextjs-icon">
-            <NextJsIcon />
-          </span>
-
-          <span className="node-icon">
-            <NodeIcon />
-          </span>
-
-          <span>
-            <img src="/techs/nestjs.png" alt="nestjs icon" />
-          </span>
-
-          <span>
-            <img src="/techs/typeorm.png" alt="typeorm icon" />
-          </span>
-
           <span className="mysql-icon">
             <MysqlIcon />
           </span>
 
-          <span>
-            <img src="/techs/postgresql.png" alt="postgresql icon" />
+          <span className="postgresql-icon">
+            <PostgreSQLIcon />
+          </span>
+
+          <span className="typeorm-icon">
+            <TypeORMIcon />
           </span>
         </div>
       </article>

@@ -28,42 +28,36 @@ export default function Projects(): JSX.Element {
             <>
               <ProjectTech
                 name="React"
-                backgroundColor="#61dbfb15"
                 border="1px solid #61dbfb"
                 textColor="#61dbfb"
                 icon={<ReactIcon />}
               />
               <ProjectTech
                 name="TypeScript"
-                backgroundColor="#2d79c715"
                 border="1px solid #2d79c7"
                 textColor="#2d79c7"
                 icon={<TypeScriptIcon />}
               />
               <ProjectTech
                 name="Redux"
-                backgroundColor="#764abc15"
                 border="1px solid #764abc"
                 textColor="#764abc"
                 icon={<ReduxIcon />}
               />
               <ProjectTech
                 name="Tailwind"
-                backgroundColor="#38bdf815"
                 border="1px solid #38bdf8"
                 textColor="#38bdf8"
                 icon={<TailwindIcon />}
               />
               <ProjectTech
                 name="Node.js"
-                backgroundColor="#43853d15"
                 border="1px solid #43853d"
                 textColor="#43853d"
                 icon={<NodeJsIcon />}
               />
               <ProjectTech
                 name="MySQL"
-                backgroundColor="#00719515"
                 border="1px solid #007195"
                 textColor="#007195"
                 icon={<MySqlIcon />}
@@ -87,21 +81,18 @@ export default function Projects(): JSX.Element {
             <>
               <ProjectTech
                 name="Astro"
-                backgroundColor="#ff590415"
                 border="1px solid #ff5904"
                 textColor="#ff5904"
                 icon={<AstroIcon />}
               />
               <ProjectTech
                 name="Tailwind"
-                backgroundColor="#38bdf815"
                 border="1px solid #38bdf8"
                 textColor="#38bdf8"
                 icon={<TailwindIcon />}
               />
               <ProjectTech
                 name="TypeScript"
-                backgroundColor="#2d79c715"
                 border="1px solid #2d79c7"
                 textColor="#2d79c7"
                 icon={<TypeScriptIcon />}
@@ -140,14 +131,12 @@ export default function Projects(): JSX.Element {
             <>
               <ProjectTech
                 name="Astro"
-                backgroundColor="#ff590415"
                 border="1px solid #ff5904"
                 textColor="#ff5904"
                 icon={<AstroIcon />}
               />
               <ProjectTech
                 name="Tailwind"
-                backgroundColor="#38bdf815"
                 border="1px solid #38bdf8"
                 textColor="#38bdf8"
                 icon={<TailwindIcon />}
@@ -177,14 +166,12 @@ export default function Projects(): JSX.Element {
             <>
               <ProjectTech
                 name="Next.js"
-                backgroundColor="#ffffff15"
                 border="1px solid #ffffff"
                 textColor="#ffffff"
                 icon={<NextJsIcon />}
               />
               <ProjectTech
                 name="Tailwind"
-                backgroundColor="#38bdf815"
                 border="1px solid #38bdf8"
                 textColor="#38bdf8"
                 icon={<TailwindIcon />}
@@ -206,7 +193,6 @@ export default function Projects(): JSX.Element {
             <>
               <ProjectTech
                 name="React"
-                backgroundColor="#61dbfb15"
                 border="1px solid #61dbfb"
                 textColor="#61dbfb"
                 icon={<ReactIcon />}

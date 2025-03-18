@@ -48,6 +48,7 @@ export default function Navbar(): JSX.Element {
         </button>
         <nav className={`navbar-nav ${menu ? 'is-active' : ''}`}>
           <ul>
+            <a href="#experience">EXPERIENCIA</a>
             <a href="#projects">PROYECTOS</a>
             <a href="#about-me">SOBRE MÍ</a>
             <a href="#tech-stack">TECNOLOGÍAS</a>

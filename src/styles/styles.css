@@ -230,6 +230,38 @@ img {
   align-items: center;
 }
 
+.experience-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.experience-container .experience-article {
+  background: radial-gradient(ellipse at top, #471b4d 1%, transparent), radial-gradient(ellipse at bottom, #ec5cff40, transparent);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.experience-container .experience-article > h4 {
+  font-size: 1.2rem;
+  color: #ec5cff;
+}
+
+.experience-container .experience-article .experience-work-info {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-container .experience-article .experience-work-info .experience-workdate {
+  color: #858585;
+}
+
+.experience-container .experience-article .experience-work-info-list {
+  font-size: 0.9rem;
+  text-wrap: pretty, balance;
+}
+
 .projects-projects {
   width: 100%;
   display: grid;
@@ -628,6 +660,8 @@ img {
 .tech-stack-container .tech-stack {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
   margin: 1rem 0;
 }
@@ -636,8 +670,8 @@ img {
   color: #ffffff;
   width: 40px;
   height: 40px;
-  transition: color, transform 200ms ease-in-out, background-color 200ms ease-in-out;
-  filter: opacity(0.7);
+  transition: filter 200ms ease-in-out, transform 200ms ease-in-out, background-color 200ms ease-in-out;
+  filter: opacity(0.8);
 }
 
 .tech-stack-container svg:hover {
@@ -948,6 +982,14 @@ img {
   }
   .section-container .section-title h2 {
     font-size: 1.1rem;
+  }
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .experience-container .experience-work-info-list {
+    font-size: 0.7rem;
   }
   .projects-projects {
     width: 100%;
@@ -1291,7 +1333,7 @@ img {
     transform: scale(1.1);
   }
   .footer-message p {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     text-align: center;
     color: #ec5cff;
   }
@@ -1516,6 +1558,9 @@ img {
   .about-me-container .about-me-container-section div img {
     width: 30px;
     filter: drop-shadow(5px 1px 3px rgba(0, 0, 0, 0.8));
+  }
+  .about-me-container .about-me-container-section .thanks {
+    text-align: center;
   }
   .about-me-container .about-me-container-article-first {
     grid-column: auto;
