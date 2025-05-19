@@ -73,6 +73,11 @@ img {
   height: auto;
 }
 
+p {
+  margin-block: 1em;
+  margin-block: 1lh;
+}
+
 // MAIN APP
 .main-app {
   width: 100%;
@@ -213,7 +218,6 @@ img {
       }
 
       p {
-        line-height: 24px;
         margin: 0;
         width: 80%;
         flex-grow: 0;
@@ -493,7 +497,6 @@ img {
 
     p {
       width: 100%;
-      line-height: 24px;
       padding-right: 1rem;
       flex-grow: 0;
       text-wrap: balance;
@@ -1088,7 +1091,6 @@ img {
         }
 
         p {
-          line-height: 24px;
           margin: 0;
           padding: 0 1rem;
           width: 100%;
@@ -1254,7 +1256,6 @@ img {
 
       p {
         width: 100%;
-        line-height: 24px;
         padding-right: 1rem;
         flex-grow: 1;
         text-wrap: pretty, balance;
@@ -1482,7 +1483,6 @@ img {
     p {
       margin: 0.3rem auto;
       padding: 0.8rem 0.5rem;
-      line-height: 24px;
       width: 100%;
       text-wrap: pretty;
     }
@@ -1611,7 +1611,7 @@ img {
 
   .footer-message {
     p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       text-align: center;
       color: $second-color;
     }
@@ -1652,7 +1652,6 @@ img {
         }
 
         p {
-          line-height: 24px;
           margin: 0;
           width: 80%;
           flex-grow: 0;
@@ -1794,7 +1793,6 @@ img {
 
       p {
         width: 100%;
-        line-height: 24px;
         padding-right: 1rem;
         flex-grow: 1;
         text-wrap: pretty, balance;
@@ -2014,7 +2012,6 @@ img {
     p {
       margin: 0.3rem auto;
       padding: 0.8rem 0.5rem;
-      line-height: 24px;
       width: 100%;
       text-wrap: balance;
 
