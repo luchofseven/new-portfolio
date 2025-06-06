@@ -882,9 +882,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid $second-color;
-  border-bottom: 1px solid $second-color;
-  padding: 3rem 0rem;
+  border-top: 1px solid $border-card;
+  border-bottom: 1px solid $border-card;
+  padding: 3rem 1rem;
 
   .footer-info {
     width: 100%;
@@ -932,7 +932,7 @@ p {
   p {
     font-size: 0.9rem;
     text-align: center;
-    color: $second-color;
+    color: #7f2f8a;
   }
 }
 
@@ -1200,8 +1200,8 @@ p {
     border-radius: 0.5rem;
     text-decoration: none;
     // border: 2px solid rgba($color: $border-card, $alpha: 0.8);
-    outline: 1px solid rgba($color: $border-card, $alpha: 0.5);
-    box-shadow: 0px 10px 10px 0px rgba($color: $border-card, $alpha: 0.5);
+    outline: 1px dotted rgba($color: $border-card, $alpha: 1);
+    box-shadow: 0px 10px 10px 0px rgba($color: $border-card, $alpha: 0.3);
 
     &:hover {
       transform: scale(1);
@@ -1553,16 +1553,14 @@ p {
   // FOOTER
   .footer-container {
     width: 100%;
-    min-height: 350px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    border-top: 1px solid $second-color;
-    border-bottom: 1px solid $second-color;
+    justify-content: space-center;
     margin: 0;
     padding: 0;
-    gap: 1rem;
+    gap: 0rem;
 
     .footer-info {
       width: 100%;
@@ -1599,6 +1597,7 @@ p {
     }
 
     .footer-logo {
+      display: none;
       width: 50px;
       transition: transform 200ms ease-in-out;
       margin-bottom: 0rem;
@@ -1613,7 +1612,6 @@ p {
     p {
       font-size: 0.8rem;
       text-align: center;
-      color: $second-color;
     }
   }
 }
