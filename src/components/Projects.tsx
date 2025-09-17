@@ -4,6 +4,7 @@ import {
   MySqlIcon,
   NextJsIcon,
   NodeJsIcon,
+  PostgreSQLIcon,
   ReactIcon,
   ReduxIcon,
   TailwindIcon,
@@ -23,42 +24,42 @@ export default function Projects(): JSX.Element {
           img="/project-ecomenuapp.webp"
           title="ECOMENU App"
           urlDeploy="https://ecomenuapp.com/"
-          lastProject={true}
+          // lastProject={true}
           techProjectStack={
             <>
               <ProjectTech
                 name="React"
-                border="1px solid #61dbfb"
+                // border="1px solid #61dbfb"
                 textColor="#61dbfb"
                 icon={<ReactIcon />}
               />
               <ProjectTech
                 name="TypeScript"
-                border="1px solid #2d79c7"
+                // border="1px solid #2d79c7"
                 textColor="#2d79c7"
                 icon={<TypeScriptIcon />}
               />
               <ProjectTech
                 name="Redux"
-                border="1px solid #764abc"
+                // border="1px solid #764abc"
                 textColor="#764abc"
                 icon={<ReduxIcon />}
               />
               <ProjectTech
                 name="Tailwind"
-                border="1px solid #38bdf8"
+                // border="1px solid #38bdf8"
                 textColor="#38bdf8"
                 icon={<TailwindIcon />}
               />
               <ProjectTech
                 name="Node.js"
-                border="1px solid #43853d"
+                // border="1px solid #43853d"
                 textColor="#43853d"
                 icon={<NodeJsIcon />}
               />
               <ProjectTech
                 name="MySQL"
-                border="1px solid #007195"
+                // border="1px solid #007195"
                 textColor="#007195"
                 icon={<MySqlIcon />}
               />
@@ -74,6 +75,50 @@ export default function Projects(): JSX.Element {
           </p>
         </Card>
         <Card
+          img="/project-shipping-service.webp"
+          title="App de encomiendas"
+          urlDeploy="https://shipping-service-front.vercel.app/"
+          techProjectStack={
+            <>
+              <ProjectTech
+                name="React"
+                // border="1px solid #61dbfb"
+                textColor="#61dbfb"
+                icon={<ReactIcon />}
+              />
+              <ProjectTech
+                name="TypeScript"
+                // border="1px solid #2d79c7"
+                textColor="#2d79c7"
+                icon={<TypeScriptIcon />}
+              />
+              <ProjectTech
+                name="Tailwind"
+                // border="1px solid #38bdf8"
+                textColor="#38bdf8"
+                icon={<TailwindIcon />}
+              />
+              <ProjectTech
+                name="Node.js"
+                // border="1px solid #43853d"
+                textColor="#43853d"
+                icon={<NodeJsIcon />}
+              />
+              <ProjectTech
+                name="PostgreSQL"
+                // border="1px solid #336791"
+                textColor="#336791"
+                icon={<PostgreSQLIcon />}
+              />
+            </>
+          }
+        >
+          <p>
+            Aplicación web para admistrar un servicio de encomiendas o
+            paquetería.
+          </p>
+        </Card>
+        <Card
           img="/project-infojobs-landing.webp"
           title="InfoJobs"
           urlDeploy="https://primer-trabajo.infojobs.net/"
@@ -81,19 +126,19 @@ export default function Projects(): JSX.Element {
             <>
               <ProjectTech
                 name="Astro"
-                border="1px solid #ff5904"
+                // border="1px solid #ff5904"
                 textColor="#ff5904"
                 icon={<AstroIcon />}
               />
               <ProjectTech
                 name="Tailwind"
-                border="1px solid #38bdf8"
+                // border="1px solid #38bdf8"
                 textColor="#38bdf8"
                 icon={<TailwindIcon />}
               />
               <ProjectTech
                 name="TypeScript"
-                border="1px solid #2d79c7"
+                // border="1px solid #2d79c7"
                 textColor="#2d79c7"
                 icon={<TypeScriptIcon />}
               />
@@ -131,13 +176,13 @@ export default function Projects(): JSX.Element {
             <>
               <ProjectTech
                 name="Astro"
-                border="1px solid #ff5904"
+                // border="1px solid #ff5904"
                 textColor="#ff5904"
                 icon={<AstroIcon />}
               />
               <ProjectTech
                 name="Tailwind"
-                border="1px solid #38bdf8"
+                // border="1px solid #38bdf8"
                 textColor="#38bdf8"
                 icon={<TailwindIcon />}
               />
@@ -166,13 +211,13 @@ export default function Projects(): JSX.Element {
             <>
               <ProjectTech
                 name="Next.js"
-                border="1px solid #ffffff"
+                // border="1px solid #ffffff"
                 textColor="#ffffff"
                 icon={<NextJsIcon />}
               />
               <ProjectTech
                 name="Tailwind"
-                border="1px solid #38bdf8"
+                // border="1px solid #38bdf8"
                 textColor="#38bdf8"
                 icon={<TailwindIcon />}
               />
@@ -184,7 +229,7 @@ export default function Projects(): JSX.Element {
             editar o eliminar dichas tareas.
           </p>
         </Card>
-        <Card
+        {/* <Card
           img="/project-search-movies-app.webp"
           title="Buscador de películas y series"
           urlDeploy="https://movies-search-app-phi.vercel.app/"
@@ -204,7 +249,7 @@ export default function Projects(): JSX.Element {
             Implementando &quot;debouncing&quot;, para que la búsqueda se
             ejecute de forma automática luego de transcurrido algunos segundos.
           </p>
-        </Card>
+        </Card> */}
         {/* <Card
           img="/project-mohana.webp"
           title="Mohana Indumentaria"

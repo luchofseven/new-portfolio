@@ -2,7 +2,7 @@ interface IProjectTech {
   name: string;
   backgroundColor?: string;
   textColor: string;
-  border: string;
+  border?: string;
   icon: JSX.Element;
 }
 

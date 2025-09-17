@@ -13,9 +13,9 @@ export default function Hero(): JSX.Element {
             ¡Me gusta destacar en los detalles! Y doy lo mejor de mí para que tu
             web sea la más bonita. 💖
           </p>
-          <a href="/cv-luciano-fernandez.pdf" download>
+          {/* <a href="/cv-luciano-fernandez.pdf" download>
             Descargar CV
-          </a>
+          </a> */}
         </article>
         <article className="hero-container-top-right">
           <img src="/me.webp" alt="Foto de Luciano Fernández" />
