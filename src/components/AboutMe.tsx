@@ -17,10 +17,10 @@ export default function AboutMe(): JSX.Element {
               />
             </picture>
             <p>
-              +3 años de experiencia creando aplicaciones web eficientes y
-              escalables. Especializado en <i>React, TypeScript y Tailwind</i>{' '}
-              para <i>frontend</i>, con experiencia en <i>backend</i> usando{' '}
-              <i>NestJS, TypeORM y MySQL/PostgreSQL</i>.
+              Más de 2 años de experiencia creando aplicaciones web.
+              Especializado en el ecosistema de <i>React</i> con{' '}
+              <i>TypeScript</i> para el <i>frontend</i>. También{' '}
+              <i>NestJS, TypeORM y MySQL/PostgreSQL</i> para el <i>backend</i>.
             </p>
             {/* <p>
               Más de 3 años de experiencia en desarrollo de aplicaciones web.
@@ -41,8 +41,9 @@ export default function AboutMe(): JSX.Element {
               />
             </picture>
             <p>
-              Actualmente co-lidero el desarrollo de <b>ECOMENU</b>, un sistema
-              para la gestión de bares y restaurantes.
+              Actualmente me desempeño como desarrollador <i>full stack</i> en{' '}
+              <b>ECOMENU</b>, un sistema para la gestión de bares y
+              restaurantes.
             </p>
             {/* <p>
               Actualmente realizando aplicaciones <i>full stack</i>, con{' '}
@@ -70,7 +71,7 @@ export default function AboutMe(): JSX.Element {
             .
           </p>
 
-          <p className="thanks">¡Gracias por tu atención!</p>
+          {/* <p className="thanks">¡Gracias!</p> */}
         </section>
 
         <article className="about-me-container-article-first">

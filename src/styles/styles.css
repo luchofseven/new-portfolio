@@ -243,7 +243,7 @@ p {
 
 .experience-container .experience-article {
   background: radial-gradient(ellipse at top, #471b4d 1%, transparent), radial-gradient(ellipse at bottom, #ec5cff40, transparent);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 1rem;
 }
 
@@ -826,7 +826,7 @@ p {
     height: 5rem;
     z-index: 100;
     margin: 0;
-    padding: 0 1rem;
+    padding: 0rem;
     background-color: #0e0012;
   }
   .navbar-header .navbar-aside {
@@ -834,7 +834,7 @@ p {
     height: auto;
   }
   .navbar-header .navbar-aside img {
-    width: 50px;
+    width: 40px;
     height: auto;
     transition: none;
   }
@@ -846,6 +846,7 @@ p {
     background-color: transparent;
     border: none;
     color: #ffffff;
+    scale: 0.9;
   }
   .navbar-header .navbar-nav {
     background-color: #0e0012;
@@ -1024,7 +1025,6 @@ p {
     border-radius: 0.5rem;
     text-decoration: none;
     outline: 1px dotted #471b4d;
-    box-shadow: 0px 10px 10px 0px rgba(71, 27, 77, 0.3);
   }
   .projects-card:hover {
     transform: scale(1);
@@ -1297,7 +1297,7 @@ p {
   }
   .footer-container {
     width: 100%;
-    min-height: 250px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;

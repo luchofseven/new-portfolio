@@ -321,7 +321,7 @@ p {
   & .experience-article {
     background: radial-gradient(ellipse at top, #471b4d 1%, transparent),
       radial-gradient(ellipse at bottom, #ec5cff40, transparent);
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 1rem;
 
     & > h4 {
@@ -965,7 +965,7 @@ p {
     height: 5rem;
     z-index: 100;
     margin: 0;
-    padding: 0 1rem;
+    padding: 0rem;
     background-color: $background-color;
 
     .navbar-aside {
@@ -973,7 +973,7 @@ p {
       height: auto;
 
       img {
-        width: 50px;
+        width: 40px;
         height: auto;
         transition: none;
 
@@ -988,6 +988,7 @@ p {
       background-color: transparent;
       border: none;
       color: $white-color;
+      scale: 0.9;
     }
 
     .navbar-nav {
@@ -1204,7 +1205,7 @@ p {
     text-decoration: none;
     // border: 2px solid rgba($color: $border-card, $alpha: 0.8);
     outline: 1px dotted rgba($color: $border-card, $alpha: 1);
-    box-shadow: 0px 10px 10px 0px rgba($color: $border-card, $alpha: 0.3);
+    // box-shadow: 0px 10px 10px 0px rgba($color: $border-card, $alpha: 0.3);
 
     &:hover {
       transform: scale(1);
@@ -1556,7 +1557,7 @@ p {
   // FOOTER
   .footer-container {
     width: 100%;
-    min-height: 250px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
