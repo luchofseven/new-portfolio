@@ -1,66 +1,81 @@
-export default function Experience() {
+'use client';
+
+import { useState } from 'react';
+
+interface Job {
+  role: string;
+  company: string;
+  period: string;
+  current?: boolean;
+  bullets: string[];
+}
+
+const experience: Job[] = [
+  {
+    role: 'Desarrollador Web Full Stack',
+    company: 'ECOMENU · Freelance',
+    period: 'Ago 2023 — Actualidad',
+    current: true,
+    bullets: [
+      'Diseño y desarrollo de la UI del sistema con React, TypeScript y Tailwind, logrando una experiencia fluida y moderna para restaurantes.',
+      'Manejo de estado global con Redux Toolkit y peticiones con RTK Query.',
+      'Mejoras en el backend con NestJS y MySQL.',
+    ],
+  },
+  {
+    role: 'Desarrollador Web',
+    company: 'midudev · Freelance',
+    period: 'Oct 2024 — Nov 2024',
+    bullets: [
+      'Componentes reutilizables para el footer y la sección “Los trabajos más cool” con Astro y Tailwind.',
+      'Construcción de una modal en la sección “Prepárate para ganar”.',
+      'Búsqueda optimizada con API + debouncing para mejorar velocidad y precisión de las sugerencias.',
+    ],
+  },
+];
+
+export default function Experience(): JSX.Element {
+  const [hovered, setHovered] = useState<string | null>(null);
+
+  const dimClass = (role: string): string =>
+    hovered !== null && hovered !== role ? 'is-dimmed' : '';
+
   return (
     <section id="experience" className="section-container">
-      <header className="section-title">
-        <h2>EXPERIENCIA</h2>
-      </header>
+      <p className="section-eyebrow">{'// 01 — trayectoria'}</p>
+      <h2 className="section-title">Experiencia</h2>
 
-      <article className="experience-container">
-        <div className="experience-article">
-          <h4>Desarrollador Web Full Stack</h4>
-          <div className="experience-work-info">
-            <span className="experience-worksite">ECOMENU - Freelance</span>
-            <span className="experience-workdate">
-              Agosto 2023 - Actualidad
-            </span>
-          </div>
-
-          <div className="experience-work-info-list">
-            <ul>
-              <li>
-                Diseñamos y desarrollamos la interfaz de usuario del sistema con
-                React, TypeScript y Tailwind, logrando una experiencia fluida y
-                moderna para los restaurantes.
-              </li>
-              <li>Implementamos estados globales con Redux Toolkit.</li>
-              <li>Realizamos peticiones a la API con RTK Query.</li>
-              <li>Aplicamos mejoras en el backend con NestJS y MySQL.</li>
+      <div className="experience-grid">
+        {experience.map((job) => (
+          <article
+            key={job.role}
+            className={`experience-card ${dimClass(job.role)}`}
+            onMouseEnter={() => {
+              setHovered(job.role);
+            }}
+            onMouseLeave={() => {
+              setHovered(null);
+            }}
+          >
+            <div className="experience-card-head">
+              <h3>{job.role}</h3>
+              {job.current === true && (
+                <span className="experience-tag">ACTUAL</span>
+              )}
+            </div>
+            <p className="experience-company">{job.company}</p>
+            <p className="experience-period">{job.period}</p>
+            <ul className="experience-bullets">
+              {job.bullets.map((bullet) => (
+                <li key={bullet}>
+                  <span className="experience-bullet-mark">▹</span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
             </ul>
-          </div>
-        </div>
-
-        <div className="experience-article">
-          <h4>Desarrollador Web</h4>
-          <div className="experience-work-info">
-            <span className="experience-worksite">midudev - Freelance</span>
-            <span className="experience-workdate">
-              Octubre 2024 - Noviembre 2024
-            </span>
-          </div>
-
-          <div className="experience-work-info-list">
-            <ul>
-              <li>
-                Implementamos componentes reutilizables para el footer y la
-                sección “Los trabajos más cool”, optimizando el código con Astro
-                y Tailwind.
-              </li>
-              <li>
-                Construimos una modal en la sección “Prepárate para ganar”.
-              </li>
-              <li>
-                Optimizamos la búsqueda de palabras clave mediante una API y una
-                función de debouncing, mejorando la velocidad y precisión de las
-                sugerencias.
-              </li>
-              <li>
-                Maquetamos y estilamos la página en general, con Astro y
-                Tailwind CSS.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </article>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }

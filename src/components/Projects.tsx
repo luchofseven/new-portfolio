@@ -1,285 +1,132 @@
-import {
-  AstroIcon,
-  // JavaScriptIcon,
-  MySqlIcon,
-  NextJsIcon,
-  NodeJsIcon,
-  PostgreSQLIcon,
-  ReactIcon,
-  ReduxIcon,
-  TailwindIcon,
-  TypeScriptIcon,
-} from '../../public/svgs/Icons';
-import Card from './Card';
-import ProjectTech from './ProjectTech';
+'use client';
+
+import { useState } from 'react';
+
+interface Project {
+  name: string;
+  desc: string;
+  tags: string[];
+  image: string;
+  url: string;
+}
+
+const projects: Project[] = [
+  {
+    name: 'ECOMENU App',
+    desc: 'Aplicación web para administración de bares y restaurantes. Actualmente utilizada por +30 negocios.',
+    tags: ['React', 'TypeScript', 'Redux', 'Tailwind', 'Node.js', 'MySQL'],
+    image: '/project-ecomenuapp.webp',
+    url: 'https://ecomenuapp.com/',
+  },
+  {
+    name: 'App de encomiendas',
+    desc: 'Plataforma para administrar un servicio de encomiendas o paquetería.',
+    tags: ['React', 'TypeScript', 'Tailwind', 'Node.js', 'PostgreSQL'],
+    image: '/project-shipping-service.webp',
+    url: 'https://shipping-service-front.vercel.app/',
+  },
+  {
+    name: 'InfoJobs',
+    desc: 'Landing de InfoJobs desarrollada en equipo de 4, liderado por @midudev.',
+    tags: ['Astro', 'Tailwind', 'TypeScript'],
+    image: '/project-infojobs-landing.webp',
+    url: 'https://primer-trabajo.infojobs.net/',
+  },
+  {
+    name: 'Tesla Clon',
+    desc: 'Clonación del sitio de Tesla, en base a un stream de @midudev.',
+    tags: ['Astro', 'Tailwind'],
+    image: '/project-tesla-landing.webp',
+    url: 'https://tesla-clone-henna-nine.vercel.app/',
+  },
+  {
+    name: 'Lista de Tareas',
+    desc: 'App tipo agenda/anotador: agregar, editar y eliminar tareas.',
+    tags: ['Next.js', 'Tailwind'],
+    image: '/project-todo-app.webp',
+    url: 'https://todo-app-next-woad.vercel.app/',
+  },
+];
 
 export default function Projects(): JSX.Element {
+  const [hovered, setHovered] = useState<string | null>(null);
+
+  const [featured, ...rest] = projects;
+
+  const dimClass = (name: string): string =>
+    hovered !== null && hovered !== name ? 'is-dimmed' : '';
+
   return (
     <section id="projects" className="section-container">
-      <header className="section-title">
-        <h2>PROYECTOS</h2>
-      </header>
-      <main className="projects-projects">
-        <Card
-          img="/project-ecomenuapp.webp"
-          title="ECOMENU App"
-          urlDeploy="https://ecomenuapp.com/"
-          // lastProject={true}
-          techProjectStack={
-            <>
-              <ProjectTech
-                name="React"
-                // border="1px solid #61dbfb"
-                textColor="#61dbfb"
-                icon={<ReactIcon />}
-              />
-              <ProjectTech
-                name="TypeScript"
-                // border="1px solid #2d79c7"
-                textColor="#2d79c7"
-                icon={<TypeScriptIcon />}
-              />
-              <ProjectTech
-                name="Redux"
-                // border="1px solid #764abc"
-                textColor="#764abc"
-                icon={<ReduxIcon />}
-              />
-              <ProjectTech
-                name="Tailwind"
-                // border="1px solid #38bdf8"
-                textColor="#38bdf8"
-                icon={<TailwindIcon />}
-              />
-              <ProjectTech
-                name="Node.js"
-                // border="1px solid #43853d"
-                textColor="#43853d"
-                icon={<NodeJsIcon />}
-              />
-              <ProjectTech
-                name="MySQL"
-                // border="1px solid #007195"
-                textColor="#007195"
-                icon={<MySqlIcon />}
-              />
-            </>
-          }
+      <p className="section-eyebrow">{'// 02 — trabajos seleccionados'}</p>
+      <h2 className="section-title">Proyectos</h2>
+
+      <div className="projects-layout">
+        <a
+          href={featured.url}
+          target="_blank"
+          rel="noreferrer"
+          className={`project-featured ${dimClass(featured.name)}`}
+          onMouseEnter={() => {
+            setHovered(featured.name);
+          }}
+          onMouseLeave={() => {
+            setHovered(null);
+          }}
         >
-          <p>
-            Aplicación web para la administración de bares y/o restaurantes.{' '}
-            <span className="highlighted">
-              Actualmente utilizada por bares locales
+          <div className="project-featured-img">
+            <img src={featured.image} alt={featured.name} />
+            {/* <span className="project-featured-badge">★ Proyecto principal</span> */}
+          </div>
+          <div className="project-featured-body">
+            <h3>{featured.name}</h3>
+            <p>{featured.desc}</p>
+            <div className="project-tags">
+              {featured.tags.map((tag) => (
+                <span key={tag} className="project-tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <span className="project-link">
+              visitar sitio <span aria-hidden="true">→</span>
             </span>
-            .
-          </p>
-        </Card>
-        <Card
-          img="/project-shipping-service.webp"
-          title="App de encomiendas"
-          urlDeploy="https://shipping-service-front.vercel.app/"
-          techProjectStack={
-            <>
-              <ProjectTech
-                name="React"
-                // border="1px solid #61dbfb"
-                textColor="#61dbfb"
-                icon={<ReactIcon />}
-              />
-              <ProjectTech
-                name="TypeScript"
-                // border="1px solid #2d79c7"
-                textColor="#2d79c7"
-                icon={<TypeScriptIcon />}
-              />
-              <ProjectTech
-                name="Tailwind"
-                // border="1px solid #38bdf8"
-                textColor="#38bdf8"
-                icon={<TailwindIcon />}
-              />
-              <ProjectTech
-                name="Node.js"
-                // border="1px solid #43853d"
-                textColor="#43853d"
-                icon={<NodeJsIcon />}
-              />
-              <ProjectTech
-                name="PostgreSQL"
-                // border="1px solid #336791"
-                textColor="#336791"
-                icon={<PostgreSQLIcon />}
-              />
-            </>
-          }
-        >
-          <p>
-            Aplicación web para admistrar un servicio de encomiendas o
-            paquetería.
-          </p>
-        </Card>
-        <Card
-          img="/project-infojobs-landing.webp"
-          title="InfoJobs"
-          urlDeploy="https://primer-trabajo.infojobs.net/"
-          techProjectStack={
-            <>
-              <ProjectTech
-                name="Astro"
-                // border="1px solid #ff5904"
-                textColor="#ff5904"
-                icon={<AstroIcon />}
-              />
-              <ProjectTech
-                name="Tailwind"
-                // border="1px solid #38bdf8"
-                textColor="#38bdf8"
-                icon={<TailwindIcon />}
-              />
-              <ProjectTech
-                name="TypeScript"
-                // border="1px solid #2d79c7"
-                textColor="#2d79c7"
-                icon={<TypeScriptIcon />}
-              />
-            </>
-          }
-        >
-          <p>
-            Landing page de{' '}
+          </div>
+        </a>
+
+        <div className="projects-grid">
+          {rest.map((project) => (
             <a
-              href="https://www.infojobs.net/"
+              key={project.name}
+              href={project.url}
               target="_blank"
               rel="noreferrer"
-              className="highlighted"
+              className={`project-card ${dimClass(project.name)}`}
+              onMouseEnter={() => {
+                setHovered(project.name);
+              }}
+              onMouseLeave={() => {
+                setHovered(null);
+              }}
             >
-              InfoJobs
-            </a>{' '}
-            desarrollada en un equipo de 4 personas, liderado por{' '}
-            <a
-              href="https://www.twitch.tv/midudev"
-              target="_blank"
-              rel="noreferrer"
-              className="highlighted"
-            >
-              @midudev
+              <div className="project-card-img">
+                <img src={project.image} alt={project.name} />
+              </div>
+              <div className="project-card-body">
+                <h3>{project.name}</h3>
+                <p>{project.desc}</p>
+                <div className="project-tags">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="project-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </a>
-            .
-          </p>
-        </Card>
-        <Card
-          img="/project-tesla-landing.webp"
-          title="Tesla Clon"
-          urlDeploy="https://tesla-clone-henna-nine.vercel.app/"
-          urlRepo="https://github.com/luchofseven/tesla-clone"
-          techProjectStack={
-            <>
-              <ProjectTech
-                name="Astro"
-                // border="1px solid #ff5904"
-                textColor="#ff5904"
-                icon={<AstroIcon />}
-              />
-              <ProjectTech
-                name="Tailwind"
-                // border="1px solid #38bdf8"
-                textColor="#38bdf8"
-                icon={<TailwindIcon />}
-              />
-            </>
-          }
-        >
-          <p>
-            Clonación del sitio web de Tesla. En base a un stream de{' '}
-            <a
-              href="https://www.twitch.tv/midudev"
-              target="_blank"
-              rel="noreferrer"
-              className="highlighted"
-            >
-              @midudev
-            </a>
-            .
-          </p>
-        </Card>
-        <Card
-          img="/project-todo-app.webp"
-          title="Lista de Tareas"
-          urlDeploy="https://todo-app-next-woad.vercel.app/"
-          urlRepo="https://github.com/luchofseven/crud-nextjs-tailwind"
-          techProjectStack={
-            <>
-              <ProjectTech
-                name="Next.js"
-                // border="1px solid #ffffff"
-                textColor="#ffffff"
-                icon={<NextJsIcon />}
-              />
-              <ProjectTech
-                name="Tailwind"
-                // border="1px solid #38bdf8"
-                textColor="#38bdf8"
-                icon={<TailwindIcon />}
-              />
-            </>
-          }
-        >
-          <p>
-            Aplicación tipo agenda o anotador, en la cual se pueden agregar,
-            editar o eliminar dichas tareas.
-          </p>
-        </Card>
-        {/* <Card
-          img="/project-search-movies-app.webp"
-          title="Buscador de películas y series"
-          urlDeploy="https://movies-search-app-phi.vercel.app/"
-          urlRepo="https://github.com/luchofseven/movies-search-app"
-          techProjectStack={
-            <>
-              <ProjectTech
-                name="React"
-                border="1px solid #61dbfb"
-                textColor="#61dbfb"
-                icon={<ReactIcon />}
-              />
-            </>
-          }
-        >
-          <p>
-            Implementando &quot;debouncing&quot;, para que la búsqueda se
-            ejecute de forma automática luego de transcurrido algunos segundos.
-          </p>
-        </Card> */}
-        {/* <Card
-          img="/project-mohana.webp"
-          title="Mohana Indumentaria"
-          urlDeploy="https://luchofseven.github.io/mohana-indumentaria/"
-          urlRepo="https://github.com/luchofseven/mohana-indumentaria"
-          techProjectStack={
-            <>
-              <ProjectTech
-                name="JavaScript"
-                backgroundColor="#f0dc4e15"
-                border="1px solid #f0dc4e"
-                textColor="#f0dc4e"
-                icon={<JavaScriptIcon />}
-              />
-              <ProjectTech
-                name="Tailwind"
-                backgroundColor="#38bdf815"
-                border="1px solid #38bdf8"
-                textColor="#38bdf8"
-                icon={<TailwindIcon />}
-              />
-            </>
-          }
-        >
-          <p>
-            Catálogo de Mohana Indumentaria. Utilizando Firestore para alojar
-            los productos. Sitio construído con JavaScript y Firebase.
-          </p>
-        </Card> */}
-      </main>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

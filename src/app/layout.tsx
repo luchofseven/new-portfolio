@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { poppins, dmSerifDisplay, lilitaOne } from '@/fonts/fonts';
-import '../styles/styles.min.css';
+import { spaceGrotesk, ibmPlexMono } from '@/fonts/fonts';
+import '../styles/styles.css';
 
 export const metadata: Metadata = {
   title: 'Luciano Fernández - Portafolio Web',
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'Mi portafolio personal, donde podrás encontrar mis proyectos y contactarte conmigo.',
   applicationName: 'Luciano Fernández',
   icons: '/og-fullstack.png',
-  themeColor: '#ec5cff',
+  themeColor: '#b45cff',
   appleWebApp: { title: 'Luciano Fernández' },
   twitter: {
     title: 'Luciano Fernández - Portafolio Web',
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${poppins.variable} ${dmSerifDisplay.variable} ${lilitaOne.variable}`}
+      className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
     >
       <body>{children}</body>
     </html>

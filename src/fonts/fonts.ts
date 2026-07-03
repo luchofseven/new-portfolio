@@ -1,22 +1,15 @@
-import { DM_Serif_Display, Lilita_One, Poppins } from 'next/font/google';
+import { IBM_Plex_Mono, Space_Grotesk } from 'next/font/google';
 
-export const poppins = Poppins({
+export const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
   display: 'swap',
 });
 
-export const dmSerifDisplay = DM_Serif_Display({
+export const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-dmSerifDisplay',
-  display: 'swap',
-});
-
-export const lilitaOne = Lilita_One({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-lilitaOne',
+  weight: ['400', '500', '600'],
+  variable: '--font-ibm-plex-mono',
   display: 'swap',
 });

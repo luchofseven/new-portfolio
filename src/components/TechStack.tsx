@@ -1,95 +1,49 @@
-import {
-  AstroIcon,
-  CSSIcon,
-  ExpressIcon,
-  HTMLIcon,
-  JavaScriptIcon,
-  MysqlIcon,
-  NestJsIcon,
-  NextJsIcon,
-  NodeIcon,
-  PostgreSQLIcon,
-  ReactIcon,
-  ReduxIcon,
-  SassIcon,
-  TailwindIcon,
-  TypeORMIcon,
-  TypeScriptIcon,
-} from '@/icons/Icons';
+interface StackGroup {
+  label: string;
+  items: string[];
+}
 
-export default function TechStack() {
+const stack: StackGroup[] = [
+  {
+    label: 'frontend',
+    items: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Astro',
+      'Tailwind',
+      'Redux Toolkit',
+      'RTK Query',
+    ],
+  },
+  {
+    label: 'backend',
+    items: ['Node.js', 'NestJS', 'TypeORM', 'MySQL', 'PostgreSQL'],
+  },
+  {
+    label: 'herramientas / ia',
+    items: ['Git', 'GitHub', 'Vercel', 'Claude Code', 'IA / LLMs'],
+  },
+];
+
+export default function TechStack(): JSX.Element {
   return (
-    <section id="tech-stack" className="section-container tech-stack-container">
-      <article>
-        <header className="section-title">
-          <h2>MIS TECNOLOGÍAS</h2>
-        </header>
-        <div className="tech-stack">
-          <span className="html-icon">
-            <HTMLIcon />
-          </span>
-
-          <span className="css-icon">
-            <CSSIcon />
-          </span>
-
-          <span className="javascript-icon">
-            <JavaScriptIcon />
-          </span>
-
-          <span className="typescript-icon">
-            <TypeScriptIcon />
-          </span>
-
-          <span className="astro-icon">
-            <AstroIcon />
-          </span>
-
-          <span className="react-icon">
-            <ReactIcon />
-          </span>
-
-          <span className="nextjs-icon">
-            <NextJsIcon />
-          </span>
-
-          <span className="redux-icon">
-            <ReduxIcon />
-          </span>
-
-          <span className="node-icon">
-            <NodeIcon />
-          </span>
-
-          <span className="express-icon">
-            <ExpressIcon />
-          </span>
-
-          <span className="nestjs-icon">
-            <NestJsIcon />
-          </span>
-
-          <span className="sass-icon">
-            <SassIcon />
-          </span>
-
-          <span className="tailwind-icon">
-            <TailwindIcon />
-          </span>
-
-          <span className="mysql-icon">
-            <MysqlIcon />
-          </span>
-
-          <span className="postgresql-icon">
-            <PostgreSQLIcon />
-          </span>
-
-          <span className="typeorm-icon">
-            <TypeORMIcon />
-          </span>
-        </div>
-      </article>
-    </section>
+    <div id="tech-stack" className="tech-stack">
+      <p className="section-eyebrow">{'// 04 — stack técnico'}</p>
+      <div className="tech-stack-groups">
+        {stack.map((group) => (
+          <div key={group.label} className="tech-stack-group">
+            <p className="tech-stack-label">{group.label}</p>
+            <div className="tech-stack-items">
+              {group.items.map((item) => (
+                <span key={item} className="tech-tag">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

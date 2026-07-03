@@ -1,25 +1,57 @@
 export default function Hero(): JSX.Element {
   return (
     <section className="hero-container">
-      <div className="hero-container-top">
-        <article className="hero-container-top-left">
-          <h1>
-            Luciano Fernández
-            <span>
-              Desarrollador <span>Full Stack</span>
-            </span>
-          </h1>
-          <p>
-            ¡Me gusta destacar en los detalles! Y doy lo mejor de mí para que tu
-            web sea la más bonita. 💖
-          </p>
-          {/* <a href="/cv-luciano-fernandez.pdf" download>
-            Descargar CV
-          </a> */}
-        </article>
-        <article className="hero-container-top-right">
-          <img src="/me.webp" alt="Foto de Luciano Fernández" />
-        </article>
+      <div className="hero-content">
+        {/* <span className="hero-badge">
+          <span className="hero-badge-dot" />
+          Disponible para nuevos proyectos
+        </span> */}
+
+        <p className="hero-role">&lt;desarrollador full&nbsp;stack /&gt;</p>
+
+        <h1 className="hero-title">
+          Luciano
+          <span className="hero-title-gradient">Fernández</span>
+        </h1>
+
+        <p className="hero-description">
+          Te ayudo a escalar tu marca o negocio construyendo aplicaciones web de
+          una manera eficiente y optimizada.{' '}
+        </p>
+
+        <div className="hero-actions">
+          <a href="#projects" className="btn btn-primary">
+            Ver proyectos
+          </a>
+          <a href="#contact" className="btn btn-ghost">
+            Contactarme
+          </a>
+          <a
+            href="/cv-luciano-fernandez.pdf"
+            download
+            className="btn btn-outline"
+          >
+            <span aria-hidden="true">↓</span> CV
+          </a>
+        </div>
+
+        <div className="hero-stats">
+          <div className="hero-stat">
+            <span className="hero-stat-value">2+</span>
+            <span className="hero-stat-label">años de exp.</span>
+          </div>
+          <span className="hero-stat-divider" />
+          <div className="hero-stat">
+            <span className="hero-stat-value">5+</span>
+            <span className="hero-stat-label">proyectos</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="hero-photo">
+        <span className="hero-photo-glow" />
+        <span className="hero-photo-ring" />
+        <img src="/me.webp" alt="Foto de Luciano Fernández" />
       </div>
     </section>
   );

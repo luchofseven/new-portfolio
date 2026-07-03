@@ -1,61 +1,65 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { MenuOpenIcon, MenuCloseIcon } from '../icons/Icons';
+import { useState } from 'react';
+import { MenuCloseIcon, MenuOpenIcon } from '../icons/Icons';
 
 export default function Navbar(): JSX.Element {
   const [menu, setMenu] = useState(false);
 
-  const handleClick = (): void => {
-    setMenu(!menu);
+  const toggleMenu = (): void => {
+    setMenu((isOpen) => !isOpen);
   };
 
-  const handleClickMenu = (e: MouseEvent): void => {
-    const target = e.target as HTMLElement;
-    if (
-      target?.matches('.navbar-nav') ||
-      target?.matches('.navbar-nav *') ||
-      target?.matches('.navbar-aside *')
-    ) {
-      setMenu(false);
-    }
+  const closeMenu = (): void => {
+    setMenu(false);
   };
-
-  useEffect(() => {
-    document.addEventListener('click', handleClickMenu);
-
-    return () => {
-      document.removeEventListener('click', handleClickMenu);
-    };
-  }, []);
 
   return (
     <header className="navbar-header">
-      <div className="navbar-header-container">
+      <nav className="navbar-nav-container">
         <aside className="navbar-aside">
-          <a href="#">
+          <a href="#" onClick={closeMenu}>
             <Image
               src="/lf-logo.webp"
               alt="Logo de Luciano Fernández"
               width={100}
               height={100}
             />
+            {/* <span className="navbar-handle">luchofseven</span> */}
           </a>
         </aside>
-        <button onClick={handleClick}>
+
+        <button
+          className="navbar-toggle"
+          type="button"
+          aria-label={menu ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={menu}
+          onClick={toggleMenu}
+        >
           {menu ? <MenuOpenIcon /> : <MenuCloseIcon />}
         </button>
-        <nav className={`navbar-nav ${menu ? 'is-active' : ''}`}>
-          <ul>
-            <a href="#experience">EXPERIENCIA</a>
-            <a href="#projects">PROYECTOS</a>
-            <a href="#about-me">SOBRE MÍ</a>
-            <a href="#tech-stack">TECNOLOGÍAS</a>
-            <a href="#contact">CONTACTO</a>
+
+        <div className={`navbar-nav ${menu ? 'is-active' : ''}`}>
+          <ul className="navbar-links" onClick={closeMenu}>
+            <li>
+              <a href="#experience">experiencia</a>
+            </li>
+            <li>
+              <a href="#projects">proyectos</a>
+            </li>
+            <li>
+              <a href="#about-me">sobre&nbsp;mí</a>
+            </li>
+            <li>
+              <a href="#tech-stack">tecnologías</a>
+            </li>
           </ul>
-        </nav>
-      </div>
+          <a href="#contact" className="navbar-cta" onClick={closeMenu}>
+            contacto
+          </a>
+        </div>
+      </nav>
     </header>
   );
 }
