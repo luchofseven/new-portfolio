@@ -125,6 +125,9 @@ img {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--page-gutter);
+  /* safety net: no child (e.g. hero ring) can trigger horizontal scroll.
+     `clip` avoids creating a scroll container, so sticky/scroll stay intact */
+  overflow-x: clip;
 }
 
 .section-container {
@@ -413,8 +416,8 @@ img {
 
 .hero-photo-glow {
   position: absolute;
-  width: 380px;
-  height: 380px;
+  width: min(380px, 76vw);
+  height: min(380px, 76vw);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(180, 92, 255, 0.4), transparent 62%);
   filter: blur(12px);
@@ -422,8 +425,8 @@ img {
 
 .hero-photo-ring {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: min(400px, 80vw);
+  height: min(400px, 80vw);
   border-radius: 50%;
   /* static mask so the ring fades at the bottom like the photo,
      while the rotating border lives on ::before (mask must not spin) */
