@@ -1,3 +1,5 @@
+import { ArrowRightIcon, DownloadIcon, EmailIcon } from '../icons/Icons';
+
 export default function Hero(): JSX.Element {
   return (
     <section className="hero-container">
@@ -22,8 +24,10 @@ export default function Hero(): JSX.Element {
         <div className="hero-actions">
           <a href="#projects" className="btn btn-primary">
             Ver proyectos
+            <ArrowRightIcon />
           </a>
           <a href="#contact" className="btn btn-ghost">
+            <EmailIcon />
             Contactarme
           </a>
           <a
@@ -31,7 +35,8 @@ export default function Hero(): JSX.Element {
             download
             className="btn btn-outline"
           >
-            <span aria-hidden="true">↓</span> CV
+            <DownloadIcon />
+            CV
           </a>
         </div>
 

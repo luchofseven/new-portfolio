@@ -175,6 +175,12 @@ img {
     box-shadow 0.2s;
 }
 
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .btn-primary {
   background: linear-gradient(100deg, var(--purple), var(--purple-deep));
   color: #fff;
@@ -184,16 +190,21 @@ img {
 
 .btn-primary:hover {
   transform: translateY(-2px);
+  box-shadow:
+    0 8px 30px rgba(139, 61, 255, 0.4),
+    0 0 20px rgba(180, 92, 255, 0.3);
 }
 
 .btn-ghost {
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(180, 92, 255, 0.5);
   color: var(--text);
 }
 
 .btn-ghost:hover {
   border-color: rgba(180, 92, 255, 0.5);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(180, 92, 255, 0.1);
+  box-shadow: 0 0 20px rgba(180, 92, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -206,6 +217,7 @@ img {
 .btn-outline:hover {
   background: rgba(180, 92, 255, 0.1);
   box-shadow: 0 0 20px rgba(180, 92, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 /* ===================================================================
@@ -270,7 +282,7 @@ img {
 }
 
 .navbar-links a:hover {
-  color: var(--text);
+  color: var(--purple-light);
 }
 
 .navbar-cta {
@@ -283,12 +295,14 @@ img {
   background: rgba(180, 92, 255, 0.08);
   transition:
     background 0.2s,
-    box-shadow 0.2s;
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .navbar-cta:hover {
   background: rgba(180, 92, 255, 0.2);
   box-shadow: 0 0 20px rgba(180, 92, 255, 0.35);
+  transform: translateY(-2px);
 }
 
 .navbar-toggle {
@@ -932,8 +946,43 @@ img {
     gap: 40px;
   }
 
+  /* Below desktop the featured card drops its special sizing and
+     matches the regular project cards. It only grows on desktop. */
   .project-featured {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    border-color: var(--border);
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    box-shadow: none;
+  }
+
+  .project-featured-img {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .project-featured-body {
+    padding: 18px;
+    gap: 10px;
+  }
+
+  .project-featured-body h3 {
+    font-size: 16px;
+  }
+
+  .project-featured-body p {
+    font-size: 12.5px;
+  }
+
+  .project-featured .project-tag {
+    font-size: 10.5px;
+    padding: 3px 8px;
+    border-radius: 5px;
+  }
+
+  .project-featured .project-link {
+    display: none;
   }
 
   .projects-grid {

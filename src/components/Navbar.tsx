@@ -54,10 +54,10 @@ export default function Navbar(): JSX.Element {
             <li>
               <a href="#tech-stack">tecnologías</a>
             </li>
+            <li>
+              <a href="#contact">contacto</a>
+            </li>
           </ul>
-          <a href="#contact" className="navbar-cta" onClick={closeMenu}>
-            contacto
-          </a>
         </div>
       </nav>
     </header>

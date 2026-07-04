@@ -52,6 +52,24 @@ export const VisitWebsiteIcon = () => (
   </svg>
 );
 
+export const ArrowRightIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 256 256">
+    <path
+      fill="currentColor"
+      d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z"
+    />
+  </svg>
+);
+
+export const DownloadIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 256 256">
+    <path
+      fill="currentColor"
+      d="M224 152v56a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16v-56a8 8 0 0 1 16 0v56h160v-56a8 8 0 0 1 16 0Zm-101.66 5.66a8 8 0 0 0 11.32 0l40-40a8 8 0 0 0-11.32-11.32L136 132.69V40a8 8 0 0 0-16 0v92.69l-26.34-26.35a8 8 0 0 0-11.32 11.32Z"
+    />
+  </svg>
+);
+
 export const HTMLIcon = () => (
   <svg role="img" viewBox="0 0 24 24" fill="#E34F26">
     <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />

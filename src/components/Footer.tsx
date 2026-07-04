@@ -1,3 +1,5 @@
+import { EmailIcon, GithubIcon, LinkedinIcon } from '../icons/Icons';
+
 export default function Footer(): JSX.Element {
   return (
     <section id="contact" className="section-container">
@@ -12,6 +14,7 @@ export default function Footer(): JSX.Element {
           </p>
           <div className="contact-actions">
             <a href="mailto:luchofseven@gmail.com" className="btn btn-primary">
+              <EmailIcon />
               Enviar email
             </a>
             <a
@@ -20,6 +23,7 @@ export default function Footer(): JSX.Element {
               rel="noreferrer"
               className="btn btn-ghost"
             >
+              <GithubIcon />
               GitHub
             </a>
             <a
@@ -28,6 +32,7 @@ export default function Footer(): JSX.Element {
               rel="noreferrer"
               className="btn btn-ghost"
             >
+              <LinkedinIcon />
               LinkedIn
             </a>
           </div>

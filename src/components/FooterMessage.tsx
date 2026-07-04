@@ -11,7 +11,7 @@ export default function FooterMessage(): JSX.Element {
       />
       <p>
         {new Date().getFullYear() ?? '2026'} — diseñado y desarrollado con ♥
-        por Luciano
+        por mí
       </p>
     </footer>
   );
